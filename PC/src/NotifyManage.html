@@ -1,0 +1,108 @@
+<!--
+Created by huqiwen on 16/7/14. 部落公告管理
+describe : 
+-->
+<!--主体内容-->
+<div class="H_GM_NotifyCon clearfix">
+    <!--头部-->
+    <header class="clearfix">
+        <p class="H_NotifyM_Tit">
+            共<span>1</span>条公告
+        </p>
+        <!--搜索-->
+        <div class="H_NotifyM_Search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="标题：">
+				       <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                      搜索
+                  </button>
+                 </span>
+            </div>
+        </div>
+
+        <p class="H_NotifyM_Todo">
+            <a data-toggle="modal"
+               data-target="#H_NotifyM_Del">删除公告</a>
+            <button type="button">添加公告
+            </button>
+        </p>
+    </header>
+    <!--成员列表-->
+
+    <div class="H_NotifyM">
+        <div class="H_NotifyM_Header">
+            <span><input type="checkbox"></span>
+            <span>ID</span>
+            <span>公告标题</span>
+            <span>发布时间</span>
+            <span>操作</span>
+        </div>
+        <ul>
+            <li class="H_NotifyM_Con">
+
+                <span><input type="checkbox"></span>
+                <span>ID</span>
+                <span>公告标题公告标题</span>
+                <span>0秒前</span>
+                <span class="H_NotifyM_Doing">
+                    <a>编辑</a>
+                    <a>删除</a>
+                </span>
+            </li>
+            <li class="H_NotifyM_Con">
+
+                <span><input type="checkbox"></span>
+                <span>ID</span>
+                <span>公告标题公告标题</span>
+                <span>0秒前</span>
+                <span class="H_NotifyM_Doing">
+                    <a>编辑</a>
+                    <a>删除</a>
+                </span>
+            </li>
+            <li class="H_NotifyM_Con">
+
+                <span><input type="checkbox"></span>
+                <span>ID</span>
+                <span>公告标题公告标题</span>
+                <span>0秒前</span>
+                <span class="H_NotifyM_Doing">
+                    <a>编辑</a>
+                    <a>删除</a>
+                </span>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+    <!--弹出框-->
+    <div class="modal fade" id="H_NotifyM_Del">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p>您确定要删除吗?</p>
+                <div>
+                    <a data-dismiss="modal" class="H_NotifyM_DelC">取消</a>
+                    <a class="H_NotifyM_DelO">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="H_Foot_pagination">
+        <!--分页-->
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </footer>
+</div>
+

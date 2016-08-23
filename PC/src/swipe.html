@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>demo2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="common/css/swiper-3.3.1.min.css">
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+       position:relative;
+    }
+ /*real css*/
+ .swiper-slide:nth-child(1) {
+       background:#fff;
+    }
+ .swiper-slide:nth-child(2) {
+       background:#fff;
+    }
+ .swiper-slide:nth-child(3) {
+       background:#0CF;
+    }
+ .swiper-slide:nth-child(4) {
+       background:#996;
+    }
+ .swiper-slide:nth-child(5) {
+       background:#CCF;
+    }
+ .pai{ position:absolute; width:200px; height:300px; text-align:center; line-height:300px; font-size:100px; color:#0CF; border-radius:30px; background:#FFF; top:50%; margin-top:-100px; border:2px solid #0CF;}
+ .pai1{left:140px; z-index:10;}
+ .pai2{left:110px;z-index:9;}
+ .pai3{left:80px;z-index:8;}
+ .swiper-slide-active .pai1{animation:pai1 3s linear 0s 1 forwards;transform-origin:center center;transform-style: preserve-3d;} 
+ @keyframes pai1{
+  0%{left:140px;transform:rotatex(0deg);color:#0CF;background:#FFF;}
+  40%{left:1000px;transform:rotatex(0deg);color:#0CF;background:#FFF;}
+  60%{left:1000px;transform:rotatex(0deg);color:#0CF;background:#FFF;}
+  80%{color:transparent;}
+  100%{left:1000px;transform:rotatex(180deg);color:transparent;background:#0CF;}
+ }
+ .swiper-slide-active .pai2{animation:pai2 3s linear 0.5s 1 forwards;transform-origin:center center;transform-style: preserve-3d;} 
+ @keyframes pai2{
+  0%{left:110pxtransform:rotatex(0deg);color:#0CF;background:#FFF;}
+  40%{left:750px;transform:rotatex(0deg);color:#0CF;background:#FFF;}
+  60%{left:750px;transform:rotatex(0deg);color:#0CF;background:#FFF;}
+  80%{color:transparent;}
+  100%{left:750px;transform:rotatex(180deg);color:transparent;background:#0CF;}
+ }
+ .swiper-slide-active .pai3{animation:pai3 3s linear 1s 1 forwards;transform-origin:center center;transform-style: preserve-3d;} 
+ @keyframes pai3{
+  0%{left:80px;transform:rotatex(0deg);color:#0CF;background:#FFF;}
+  40%{left:500px;transform:rotatex(0deg);color:#0CF;background:#FFF;}
+  60%{left:500px;transform:rotatex(0deg);color:#0CF;background:#FFF;}
+  80%{color:transparent;}
+  100%{left:500px;transform:rotatex(180deg);color:transparent;background:#0CF;}
+ }
+ 
+ .zhuan{position:absolute; width:100px; height:100px; text-align:center; font-size:100px; color:#0CF; border-radius:50px; background:#09F; top:50%; margin-top:-50px; left:100px;}
+ .swiper-slide-active .zhuan1{animation:zhuan1 5s linear 0s infinite forwards;transform-origin:300px center;}
+ @keyframes zhuan1{
+  0%{ transform:rotate(0deg) scale(1);opacity:1;}
+  100%{transform:rotate(360deg) scale(0.5);opacity:0.3;}
+ }
+ .swiper-slide-active .zhuan2{animation:zhuan2 5s linear 0s infinite forwards;transform-origin:300px center;transform:rotate(72deg);}
+ @keyframes zhuan2{
+  0%{transform:rotate(72deg) scale(1);opacity:1;}
+  100%{transform:rotate(432deg) scale(0.5);opacity:0.3;}
+ }
+ .swiper-slide-active .zhuan3{animation:zhuan3 5s linear 0s infinite forwards;transform-origin:300px center;transform:rotate(144deg);}
+ @keyframes zhuan3{
+  0%{transform:rotate(144deg) scale(1);opacity:1;}
+  100%{transform:rotate(504deg) scale(0.5);opacity:0.3;}
+ }
+ .swiper-slide-active .zhuan4{animation:zhuan4 5s linear 0s infinite forwards;transform-origin:300px center;transform:rotate(216deg);}
+ @keyframes zhuan4{
+  0%{transform:rotate(216deg) scale(1);opacity:1;}
+  100%{transform:rotate(576deg) scale(0.5);opacity:0.3;}
+ }
+ .swiper-slide-active .zhuan5{animation:zhuan5 5s linear 0s infinite forwards;transform-origin:300px center;transform:rotate(288deg);}
+ @keyframes zhuan5{
+  0%{transform:rotate(288deg) scale(1);opacity:1;}
+  100%{transform:rotate(648deg) scale(0.5);opacity:0.3;}
+ }
+ 
+ .normal{ display:none;}
+ .normal .jinru{ height:40px; line-height:40px; text-align:center; background:#09F;}
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div id="swiper-container">
+        <div>
+            <div>
+             <div class="pai pai1">2</div>
+                <div class="pai pai2">3</div>
+                <div class="pai pai3">4</div>
+            </div>
+            <div>
+             <div class="zhuan zhuan1"></div>
+                <div class="zhuan zhuan2"></div>
+                <div class="zhuan zhuan3"></div>
+                <div class="zhuan zhuan4"></div>
+                <div class="zhuan zhuan5"></div>
+            </div>
+            <div>
+             <div>动画3</div>
+            </div>
+            <div>
+             <div>动画4</div>
+            </div>
+            <div>
+             <div>动画5</div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div></div>
+    </div>
+ <div id="normal">
+     
+        <p>我是正常的内容</p>
+        
+        <div id="jinru">点击可进入切换预览</div>
+        
+    </div>
+    <!-- Swiper JS -->
+    <script src="common/js/swiper-3.3.1.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+ var swipercontainer=document.getElementById("swiper-container");
+ var normal=document.getElementById("normal");
+ var jinru=document.getElementById("jinru");
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical',
+  onTouchEnd: function(swiper){
+     if(swiper.isEnd){
+     swipercontainer.style.display="none";
+     normal.style.display="block";
+   }else{};
+  }
+    }); 
+ jinru.onclick=function(){  
+  swipercontainer.style.display="block";
+  normal.style.display="none";
+  swiper.slideTo(0, 1000, false);//切换到第一个slide，速度为1秒
+  
+ };
+ 
+ 
+ 
+    </script>
+</body>
+</html>

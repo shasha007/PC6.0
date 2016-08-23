@@ -1,0 +1,208 @@
+<!--
+Created by huqiwen on 16/7/12. 部落详情
+describe : 
+-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <link href="common/css/share.css" rel="stylesheet">
+    <title>部落详情</title>
+
+</head>
+<body>
+<div id="GHead"></div>
+<header class="H_GInfor_header">
+    <!--导航-->
+    <ol class="breadcrumb">
+        <li>您的位置</li>
+        <li><a href="#">社团</a></li>
+        <li class="active">口袋大学经济与技术管理学院学生会</li>
+    </ol>
+
+    <div class="H_GInfo_info">
+        <span>院系:</span>
+        <span>经济管理学院</span>
+        <span>活力值:</span>
+        <span>18</span>
+        <span>部落主席:</span>
+        <span>XX</span>
+        <span>创建时间:</span>
+        <span>2015-08-11</span>
+        <!--todo 权限问题 -->
+        <div class="dropdown H_GInfor_More">
+            <button type="button" class="btn dropdown-toggle" id="H_GInfor_Btn"
+                    data-toggle="dropdown">
+                <i>...</i>
+            </button>
+            <ul class="dropdown-menu" id="H_Group_Manege" role="menu" aria-labelledby="H_GInfor_Btn">
+                <!--下拉选项-->
+                <li role="presentation">
+                    <a role="menuitem" tabindex="1" href="#">部落管理</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="2" href data-toggle="modal"
+                       data-target="#H_GInfor_AddFriend">邀请好友</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="3" href="#">部落二维码</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="4" href="#">退出</a>
+                </li>
+                <li class="asd" data-target="#AlbumEdit">
+                    <a>退出</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--todo 权限问题 为管理员是隐藏 -->
+        <button class="H_GInfor_InBtn">申请加入</button>
+
+    </div>
+</header>
+
+<!-- 邀请好友弹出框 -->
+<div class="modal fade" id="H_GInfor_AddFriend">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <p class="H_GInfor_AddTit">邀请好友</p>
+
+            <div class="H_GInfor_Add">
+                <!--左侧好友列表 data-friendId为好友id data-position="1"标志左侧-->
+                <div class="H_GInfor_AddL">
+                    <ul>
+                        <li class="H_AddLi" data-friendId="1" data-position="1">
+                            <img src="common/images/H-person1.png">
+                            文艺青年文艺青年文艺青年文艺青年
+                        </li>
+                        <li class="H_AddLi" data-friendId="2" data-position="1">
+                            <img src="common/images/H-person1.png">
+                            文艺青年文艺
+                        </li>
+                    </ul>
+                </div>
+                <div class="H_GInfor_AddC">
+                    <img src="common/images/H_right_arrow.png">
+                </div>
+                <!--右侧好友列表 data-friendId为好友id data-position="0"标志右侧-->
+                <div class="H_GInfor_AddR">
+                    <ul>
+                        <li class="H_DelLi" data-friendId="3" data-position="0">
+                            <img src="common/images/H-person1.png">
+                            文艺青年
+                        </li>
+                        <li class="H_DelLi" data-friendId="4" data-position="0">
+                            <img src="common/images/H-person1.png">
+                            文艺青年
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <footer>
+                <a data-dismiss="modal" aria-hidden="true">取消</a>
+                <a class="H_AddFriend_Close">确认</a>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<div class="H_GInfo_con">
+    <header>
+        <img class="H_Ginfo_HImg" src="common/images/h_Group.png">
+
+        <div class="H_GInfo_Name">
+            <p>口袋大学经济与技术管理学院学生会</p>
+            <!--评分-->
+            <p>
+                <img src="common/images/H_star_1.png">
+                <img src="common/images/H_star_1.png">
+                <img src="common/images/H_star_1.png">
+                <img src="common/images/H_star_1.png">
+                <img src="common/images/H_star_2.png">
+            </p>
+
+            <p>上帝佑能找到房子的人!金窝银窝不如自己的?窝新人即来 故人离开怎么说……找个房子住下来先？</p>
+            <!--分享功能-->
+            <div id="socialShare">
+                <a class="msb_main">
+                    <img title="分享" src="common/images/share_core_square.jpg">
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="h_Group_con">
+        <!--主体导航-->
+        <div class="H_Ginfo_Nav clearfix">
+            <a>
+                <div data-GroupType="5">部落</div>
+            </a>
+            <a>
+                <div data-GroupType="1">公告</div>
+            </a>
+            <a>
+                <div data-GroupType="2">活动</div>
+            </a>
+            <a>
+                <div data-GroupType="3">相册</div>
+            </a>
+            <a>
+                <div data-GroupType="4">成员</div>
+            </a>
+        </div>
+        <!--可以被替换的部分-->
+        <div class="h_Group_Swap">
+            <!--内容-->
+        </div>
+    </div>
+</div>
+
+<!--编辑照片信息-->
+<div class="modal fade" id="AlbumEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <p class="tit">
+                编辑照片信息
+            </p>
+
+            <p class="input">
+                <input type="text">
+            </p>
+
+            <p class="text">
+                <textarea placeholder="输入描述">
+                </textarea>
+            </p>
+            <footer>
+                <a class="cancel" data-dismiss="modal" aria-hidden="true">取消</a>
+                <a class="ok">确定</a>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<div id="pFooter"></div>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/Album.js"></script>
+<script src="common/js/Group.js"></script>
+<script src="common/js/publicContainer.js"></script>
+<script src="common/js/share.js"></script>
+<script>
+    $(function () {
+        $(".h_Group_Swap").load("GroupSth.html");
+        $("#socialShare").socialShare({
+            content: '',
+            url:'',
+            titile:''
+        });
+    })
+</script>
+</html>

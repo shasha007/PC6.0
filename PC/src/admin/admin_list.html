@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../common/css/DT_bootstrap.css">
+		<link rel="stylesheet" href="../common/css/admin.css" />
+		<link rel="stylesheet" href="../common/css/square/blue.css">
+		<script src="../bower_components/jquery/dist/jquery.js"></script>
+		<script src="../common/js/icheck.min.js"></script>
+		<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="customContainer">
+			<!--菜单-->
+			<div class="menu">
+				<ul>
+					<li class="menuItem">
+						 <p class="add"><span class="glyphicon glyphicon-home"></span>首页</p>
+						 <ul>
+						 	<li>item1</li>
+						 	<li>item2</li>
+						 	<li>item3</li>
+						 	<li>item4</li>
+						 	<li>item5</li>
+						 </ul>
+					</li>
+					<li class="menuItem">
+						 <p  class="add"><span class="glyphicon glyphicon-copyright-mark"></span>列表</p>
+						 <ul>
+						 	<li>item1</li>
+						 	<li>item2</li>
+						 	<li>item3</li>
+						 	<li>item4</li>
+						 	<li>item5</li>
+						 </ul>
+					</li>
+					<li class="menuItem">
+						 <p  class="add"><span class="glyphicon glyphicon-folder-close"></span>管理</p>
+						 <ul>
+						 	<li>item1</li>
+						 	<li>item2</li>
+						 	<li>item3</li>
+						 </ul>
+					</li>
+					<li class="menuItem">
+						 <div><span class="glyphicon glyphicon-user"></span>登录</div>
+					</li>
+				</ul>
+			</div>
+			
+			<!--右侧容器-->
+			<div class="mainContent">
+				<div class="head_section">
+					<div class="input-group">
+				        <input type="text" class="form-control" placeholder="Search here...">
+				    </div>
+					<div class="btn-group">
+						<div class="dropdown-toggle head_info" data-toggle="dropdown">
+							<img src="../common/images/Footer_two.png">Allen Iversion
+						</div>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">功能</a></li>
+							<li><a href="#">另一个功能</a></li>
+							<li><a href="#">其他</a></li>
+						</ul>
+					</div>
+					<div class="btn-group btn_op1">
+						<div class="dropdown-toggle head_info" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-align-justify"></span>
+							<span class="badge">50</span>
+						</div>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">功能</a></li>
+							<li><a href="#">另一个功能</a></li>
+							<li><a href="#">其他</a></li>
+						</ul>
+					</div>
+					<div class="btn-group btn_op2">
+						<div class="dropdown-toggle head_info" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-align-justify"></span>
+						</div>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">功能</a></li>
+							<li><a href="#">另一个功能</a></li>
+							<li><a href="#">其他</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="mainContent_area mainContent_area_list">
+					<form role="form">
+						<div>
+							<p>
+								<span>学校:</span>
+								<select class="form-control m-bot15">
+									<option>口袋大学</option>
+									<option>口袋大学口袋大学</option>
+								</select>
+							</p>
+							<p>
+								<span>院校:</span>
+								<select class="form-control m-bot15">
+									<option>口袋大学</option>
+									<option>口袋大学口袋大学</option>
+								</select>
+							</p>
+						</div>
+						<div>
+							<p>
+								<span>年纪:</span>
+								<input type="text" placeholder="年级(格式:09,11,12等)" class="form-control"/>
+								<!--<i>(格式:09,11,12等)</i>-->
+							</p>
+							<p>
+								<span>专业:</span>
+								<input type="text" placeholder="专业" class="form-control"/>
+							</p>
+						</div>
+						<div>
+							<p>
+								<span>Email:</span>
+								<input type="text" placeholder="Email" class="form-control"/>
+							</p>
+							<p>
+								<span>用户ID:</span>
+								<input type="text" placeholder="用户ID" class="form-control"/>
+							</p>
+						</div>
+						<div>
+							<p>
+								<span>手机:</span>
+								<input type="text" placeholder="手机" class="form-control"/>
+							</p>
+							<p>
+								<span>姓名:</span>
+								<input type="text" placeholder="姓名" class="form-control"/>
+							</p>
+						</div>
+						<div>
+							<p>
+								<span>昵称:</span>
+								<input type="text" placeholder="昵称" class="form-control"/>
+							</p>
+							<p>
+								<span>身份:</span>
+								<input type="radio" name="iCheck"><em>全部</em>
+								<input type="radio" name="iCheck"><em>学生</em>
+								<input type="radio" name="iCheck"><em>老师</em>
+							</p>
+						</div>
+						<div>
+							<p>
+								<span>性别:</span>
+								<input type="radio" name="iCheck"><em>全部</em>
+								<input type="radio" name="iCheck"><em>男</em>
+								<input type="radio" name="iCheck"><em>女</em>
+							</p>
+							<p>
+								<span>是否初始化:</span>
+								<input type="radio" name="iCheck"><em>全部</em>
+								<input type="radio" name="iCheck"><em>男</em>
+								<input type="radio" name="iCheck"><em>女</em>
+							</p>
+						</div>
+						
+						<button type="submit" class="btn btn-default">重置</button>
+					    <button type="submit" class="btn btn-default btn-primary">确定</button>
+					</form>
+					<div class="search_result">
+						<p>
+							<button type="button" class="btn btn-primary">添加用户</button>
+							<button type="button" class="btn btn-primary">搜索完毕</button>
+							<button type="button" class="btn btn-primary">转移学校</button>
+							<button type="button" class="btn btn-primary">转移用户组</button>
+							<button type="button" class="btn btn-primary">删除用户</button>
+							<button type="button" class="btn btn-primary">验证用户</button>
+						</p>
+						  <table  class="display table table-bordered table-striped" id="dynamic-table">
+        <thead>
+	      <tr>
+	      	 <th style="text-align: center;"><input type="checkbox"></th>
+	      	 <th class="sorting">ID</th>
+	         <th>用户信息</th>
+	         <th>学校</th>
+	         <th>用户组</th>
+	      </tr>
+        </thead>
+        <tbody>
+        <tr class="gradeX">
+	      	 <th style="text-align: center;"><input type="checkbox"></th>
+	      	 <td>Tanmay3</td>
+	         <td>Tanmay4</td>
+	         <td>Bangalore1</td>
+	         <td>560003</td>
+        </tr>
+        <tr class="gradeC">
+	      	 <th style="text-align: center;"><input type="checkbox"></th>
+	      	 <td>Tanmay2</td>
+	         <td>Tanmay1</td>
+	         <td>Bangalore3</td>
+	         <td>560001</td>
+        </tr>
+        </tbody>
+
+        </table>
+
+						<div class="pagniga">
+							<a href="#">&laquo;</a>
+							<a href="#">&lsaquo;</a>
+							<input class="pageNa" type="text" readonly="readonly" />
+						    <a href="#"">&rsaquo;</a>
+						    <a href="#">&raquo;</a>
+						    <input class="goPage" type="text" /><a href="#" class="goPage">GO</a>
+						</div>
+						<select>
+							<option>5</option>
+							<option>10</option>
+							<option>15</option>
+						</select>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+	$(document).ready(function(){
+	  $('input').iCheck({
+	    checkboxClass: 'icheckbox_square-blue',  // 注意square和blue的对应关系,用于type=checkbox
+	    radioClass: 'iradio_square-blue', // 用于type=radio
+	    increaseArea: '20%' // 增大可以点击的区域
+	  });
+	});
+	
+	</script>
+	<script src="../common/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script src="../common/js/admin.js"></script>
+	<script src="../common/js/modernizr.min.js"></script>
+	<script src="../common/js/jquery.nicescroll.js"></script>
+	
+	<!--dynamic table-->
+	<script src="../common/js/jquery.dataTables.js"></script>
+	<script src="../common/js/DT_bootstrap.js"></script>
+	<!--dynamic table initialization -->
+	<script src="../common/js/dynamic_table_init.js"></script>
+	<script src="../common/js/tablesort.js"></script>
+	<!--fenye-->
+	<!--<script src="../common/js/jqPaginator.min.js"></script>-->
+	<script src="../common/js/jquery.jqpagination.js"></script>
+</html>

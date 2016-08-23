@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <title>投票选手报名</title>
+</head>
+<body>
+<div id="pHead2"></div>
+
+<div class="L_activity_div">
+	<div class="L_vote_sign">
+		<div>您如果想成为该活动的活动选手，请填写以下资料，若不想，请关闭该页面</div>
+	
+		<div>
+			选手名称
+			<div><input type="text" placeholder="请输入活动地点"></div>
+		</div>
+		<div>
+			选手院校
+			<div><input type="text" value="中国农业大学"></div>
+		</div>
+		<div class="L_autoHead">
+			选手头像
+			<div>
+				<div><img src="common/images/u90.png" id="icon"></div> 
+				<i>浏览<input type="file" onchange="uploadIcon()" id="file"></i>
+				<em id="filename"></em>
+			</div>
+		</div>
+		<div class="L_autPhoto">
+			选手照片
+			<ul>
+				<li>
+					<img src="common/images/u65.png" class="wk_icon" id="icon">
+					<p>选择照片</p>
+					<input type="file" id="file"/>
+				</li>
+				<li>
+					<img src="common/images/u65.png" class="wk_icon" id="L_icon">
+					<p>选择照片</p>
+					<input type="file" id="L_file"/>
+				</li>
+			</ul>
+		</div>
+		<div><a href="" class="L_submitAuto">提交</a></div>
+	</div>
+	
+</div>
+<div id="pFooter"></div>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="common/js/publicContainer.js"></script>
+<script src="common/js/autoVote.js" ></script>
+</html>

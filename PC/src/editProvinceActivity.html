@@ -1,0 +1,90 @@
+<!--<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <title>管理活动——编辑活动</title>
+</head>
+<body>
+<div id="pHead2"></div>-->
+
+<div class="L_AG_Mem">
+	您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">活动管理</a></span>
+
+</div>
+
+<div class="L_AG_Content">
+
+	<div class="L_editA_content">
+		<div><div class="L_editA_left"><span>*</span>活动名称</div><input type="text" value="我是校园摄影师" style="width: 692px;"/></div>
+		
+		<div><div class="L_editA_left"><span>*</span>活动简介</div><textarea rows="6" maxlength="250" name="textarea" id="L_TextArea1" onkeyup="words_deal();"></textarea>
+			<div class="L_editA_counter"><span id="textCount">250</span><span>/250</span></div>
+		</div>
+		<div><div class="L_editA_left"><span>*</span>显示学校</div>
+		
+					<div class="L_detail_school">
+						<!--<div class="L_select_add">-->
+						<select id="L_province_select_v" name="BigCate" size="1" onchange="changeProv(this)"> 
+							<option value="">江苏</option> 
+							<option value="">浙江</option> 
+						</select> 
+						<select id="L_city_select_v" name="SmlCate" size="1" onchange="getSchools(this)"> 
+							<option value="1">苏州</option> 
+							<option value="2">南京</option> 
+							<option value="3">杭州</option> 
+							<option value="4">南浔</option> 
+						</select> 
+								<!--<a href="javascript:void(0);" onclick="addArea();" class="L_add_school" style="color:  #3a9fdf;">+增加投放地区</a>-->
+						<!--</div>-->
+						<div class="L_addN">
+							<a href="javascript:void(0);" onclick="addArea();" class="L_add_school" style="color:  #3a9fdf;">+增加投放地区</a>
+						</div>
+						<div class="L_selected_school_v" id="L_selected_school_v" style="margin-left: 14%;" onmouseover="allshow(this)" onmouseout="allhidden(this)" >
+					
+						</div>
+						<div class="L_all_schools_v" id="L_all_schools_v" style="margin-left: 14%;">
+							<div class="L_checked_school_v" onmovestart="allslide(this)">已选学校:</div>
+							<div class="L_hover_school_v"></div>
+						</div>
+					</div>
+		</div>
+		<div><div class="L_editA_left">活动地点</div><input type="text" placeholder="请输入活动地点" style="width: 740px;"/></div>
+		<div><div class="L_editA_left"><span>*</span>活动分类</div><select><option selected="selected">请选择活动类型</option><option>活动A</option></select></div>
+		<div><div class="L_editA_left">参加费用</div><select><option>免费</option><option>收费</option></select><input type="text" placeholder="费用说明：" /></div>
+		<div><div class="L_editA_left"><span>*</span>活动时间</div><input type="datetime-local" />&nbsp;至&nbsp;<input type="datetime-local"  /></div>
+		<div><div class="L_editA_left"><span>*</span>截止报名</div><input type="datetime-local" />&nbsp;至&nbsp;<input type="datetime-local"  /></div>
+		<div><div class="L_editA_left">定时上线</div><input type="datetime-local"/></div>
+		<div><div class="L_editA_left">剩余名额</div><select><option>无限制</option></select>&nbsp;&nbsp;<span>剩余名额上限填整数或者无上限</span></div>
+		<div><div class="L_editA_left"><span>*</span>签到码使用限定</div><input type="text" value="5" /><span>人次</span></div>
+		<div><div class="L_editA_left"><span>*</span>联系方式</div><input type="text" placeholder="填写联系人电话，如张女士：15888888888" /></div>
+		<div><div class="L_editA_left">活动选项</div>
+			 <!--<input type="checkbox" />&nbsp;<span>报名活动需要审批</span><input type="checkbox" />&nbsp;<span>报名活动需要填写联系电话</span>
+			 <input type="checkbox" />&nbsp;<span>不报名也可签到</span><input type="checkbox" />&nbsp;<span>打开投票功能</span>
+			 <input type="checkbox" />&nbsp;<span>打开签退功能</span>-->
+			 <input type="checkbox" />&nbsp;报名活动需要审批<input type="checkbox" />&nbsp;报名活动需要填写联系电话
+			 <input type="checkbox" />&nbsp;不报名也可签到<input type="checkbox" />&nbsp;打开投票功能
+			 <input type="checkbox" />&nbsp;打开签退功能
+		</div>
+		<div><div class="L_editA_left"><span>*</span>活动海报</div>
+			<div class="L_editA_photo">
+                <img id="icon" src="">
+                        <span>
+                         <p class="L_editA_AddImg"> 上传海报<input type="file" onchange="UploadImg()" id="file"></p><br />
+                         <p>尺寸为200*200  支持格式JPG,PNG,GIF。<br>活动首页顶部，如果没有，<br>可根据活动分类选择下面一款推荐的默认海报。</p>
+                        </span>
+            </div>
+		
+		</div>
+		<button>提交</button>
+	</div>
+</div>
+<!--</body>
+</html>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/publicContainer.js"></script>-->
+<script src="common/js/L_editA.js"></script>
+<script src="common/js/releaseA.js"></script>

@@ -1,0 +1,248 @@
+
+<body>
+<!--<div id="pHead2"></div>-->
+
+<div class="L_AG_Mem">
+	您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">活动管理</a></span>
+</div>
+<div class="L_AG_Content">
+
+ <div class="L_NumM_Con clearfix">
+            <!--头部-->
+            <div class="clearfix">
+                <p>
+					共<span>12</span>个选手
+                </p>
+                <!--搜索-->
+                <div class="L_NumM_Search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="选手：">
+				       <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                      搜索
+                  </button>
+                 </span>
+                    </div>
+                </div>
+                <div class="L_NumM_right">
+	                 <a href="#"  data-toggle="modal" data-target="#L_Vote_Config">投票设定</a>
+	                <a href="#" data-toggle="modal" data-target="#myModal">选手上传已关闭</a>
+	                 <button type="button" data-toggle="modal" data-target="#L_NM_Member" class="L_addVoter">添加选手
+	            	</button>
+	            	<button type="button" data-toggle="modal" data-target="#L_uplode_Config">上传配置</button>
+	                <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" >添加选手</button>
+	                <button type="button" class="btn btn-default">上传配置</button>-->
+                </div>
+
+            </div>
+            <!--成员列表-->
+
+            <div class="L_NumM_Li">
+			    <table  class="table" >
+			        <thead class="L_NumM_LiTit">
+				      <tr>
+				      	 <th style="text-align: center;"><input type="checkbox"></th>
+				      	 <th style="text-align: center;vertical-align:middle;" class="sorting">ID</th>
+				         <th style="text-align: center;vertical-align:middle;">照片</th>
+				         <th style="text-align: center;vertical-align:middle;">学校</th>
+				         <th style="text-align: center;vertical-align:middle;">选手</th>
+				         <th style="text-align: center;vertical-align:middle;">UID</th>
+				         <th style="text-align: center;vertical-align:middle;">票数/投票</th>
+				         <th style="text-align: center;vertical-align:middle;">靓照</th>
+				         <th style="text-align: center;vertical-align:middle;">视频</th>
+				         <th style="text-align: center;vertical-align:middle;">操作</th>
+				      </tr>
+			        </thead>
+			        <tbody class="L_NumM_tbody">
+			        <tr>
+				      	 <th style="text-align: center;"><input type="checkbox"></th>
+				      	 <td>12</td>
+				         <td><img style="width: 70px;height: 87px;" src="common/images/L_voter.png" /></td>
+				         <td>南京大学</td>
+				         <td>柳帅</td>
+				         <td>0</td>
+				         <td>2193 已打开</td>
+				         <td><a href="#" class="L_edit_sunPhoto">编辑靓照</a></td>
+				         <td><a href="#" class="L_edit_sunVideo">编辑视频</a></td>
+				         <td>
+				         	<p><a href="#" data-toggle="modal" data-target="#L_voter_view">查看</a></p>
+				         	<p><a href="#">编辑</a></p>
+				         	<p><a href="#">删除</a></p>
+				         </td>
+			        </tr>
+			        <tr>
+				      	 <th style="text-align: center;"><input type="checkbox"></th>
+				      	 <td>12</td>
+				         <td><img style="width: 70px;height: 87px;" src="common/images/L_voter.png" /></td>
+				         <td>南京大学</td>
+				         <td>柳帅</td>
+				         <td>0</td>
+				         <td>2193 已打开</td>
+				         <td><a href="#" class="L_edit_sunPhoto">编辑靓照</a></td>
+				         <td><a href="#" class="L_edit_sunVideo">编辑视频</a></td>
+				         <td>
+				         	<p><a href="#" data-toggle="modal" data-target="#L_voter_view">查看</a></p>
+				         	<p><a href="#">编辑</a></p>
+				         	<p><a href="#">删除</a></p>
+				         </td>
+			        </tr>
+			        </tbody>
+			
+			    </table>
+			</div>
+
+		<!--弹出框2-->
+		<div class="modal fade" id="L_Vote_Config" >
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+			          <div class="modal-body small L_file-box">
+			            <p style="font-size: 18px;color: #CCCCCC;">投票设定</p>
+			            <p>打开投票：<input type="radio" value=""/>打开&nbsp;<input type="radio" value=""/>不打开</p>
+			            <p>投票必须先签到：<input type="radio" value=""/>是&nbsp;<input type="radio" value=""/>否</p>
+			            <p>每人最多可投（1—100）票：<input type="text"/>票</p>
+			            <p>可否重复投票：<input type="radio" value=""/>可重复&nbsp;<input type="radio" value=""/>否</p>
+			            <p>是否允许每日投票：<input type="radio" value=""/>是&nbsp;<input type="radio" value=""/>否</p>
+			            <p>允许投票年级：<input type="text"/>2013,2014多个用英文逗号隔开，不填则不限制</p>
+			            <p>选手投票规则：<input type="radio" value=""/>按票数由高到低排序&nbsp;<input type="radio" value=""/>随机排序</p>
+			            <p>允许投票院系：<select><option selected="selected">选择院系</option><option>计算机学院</option></select>（不选择则不限制）</p>
+			          
+			          </div>
+			        <div class="modal-footer" >
+	                    <a data-dismiss="modal">取消</a>
+	                    <a>确定</a>
+		        	</div>
+		    	</div>
+			</div>
+		</div>
+	
+			<!--上传配置弹出框-->
+		<div class="modal fade" id="L_uplode_Config" >
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+			          <div class="modal-body small L_voter_cofig">
+						<!--<div class="L_voter_detail">-->
+				            <div style="font-size: 16px;color: #CCCCCC;padding: 20px;">自定义选手上传资料时，输入框的名称（ 以下为必填项 ）</div>
+				            <div class="L_thead_Li">
+							   <span style="color: #3e3e3e;">输入框名称</span>
+							   <span>说明</span>
+							   <span>是否在前台显示</span>
+							   <span>是否必填</span>
+							   <span>操作</span>
+							</div>
+							<div class="L_must_comment">
+								以下为必填项
+							</div>
+				          	<div class="L_tbody_th L_config_name">
+				          		<span><input type="text" placeholder="选手名称"/></span>
+				          		<span>默认：选手名称</span>
+				          		<span><input type="checkbox" id="L_show" checked="true" disabled="true"/></span>
+				          		<span><input type="checkbox" id="L_must" checked="true" disabled="true"/></span>
+				          	</div>
+				          	<div class="L_tbody_th L_config_school">
+				          		<span><input type="text" placeholder="选手院校"/></span>
+				          		<span>默认：选手院校</span>
+				          		<span><input type="checkbox" id="L_show" checked="true" disabled="true"/></span>
+				          		<span><input type="checkbox" id="L_must" checked="true" disabled="true"/></span>
+				          	</div>
+				          	<div class="L_tbody_th L_config_view">
+				          		<span><input type="text" placeholder="简介"  disabled="true"/></span>
+				          		<span>默认：简介</span>
+				          		<span><input type="checkbox" id="L_show" checked="true" disabled="true"/></span>
+				          		<span><input type="checkbox" id="L_must" checked="true" disabled="true"/></span>
+				          	</div>
+				          	<div class="L_tbody_th L_config_head">
+				          		<span><input type="text" placeholder="头像+展示图片" disabled="true"/></span>
+				          		<span>默认：头像+展示图片</span>
+				          		<span><input type="checkbox" id="L_show" checked="true" disabled="true"/></span>
+				          		<span><input type="checkbox" id="L_must" checked="true" disabled="true"/></span>
+				          	</div>
+				          	<div class="L_notmust_comment">
+								以下为可选项：<span>250字以内，无格式，文本：大于250字，有格式</span>
+							</div>
+				          	<div class="L_tbody_footer">
+								<a href="javascript:void(0);" id="addConfig" style="color: #3EA1E5;">+添加新字段</a>
+				          	</div>
+			            </div>
+			        <div class="modal-footer" >
+	                    <a data-dismiss="modal">取消</a>
+	                    <a>确定</a>
+		        	</div>
+		    	</div>
+			</div>
+		</div>
+		
+		<!--查看弹出框-->
+		<div class="modal fade" id="L_voter_view" >
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+			          <div class="modal-body small L_voter_see">
+							<div class="L_vote_sub">
+								<img src="common/images/L_rank02.png" />
+								<div class="L_vote_right">
+									<p>选手名称&nbsp;&nbsp;&nbsp;<span>辩论社</span></p>
+									<p>选手院校&nbsp;&nbsp;&nbsp;<span>苏州大学</span></p>
+									<div class="L_vote_scan">
+										<p>简介</p>
+										<div>
+											苏州大学，简称苏大，坐落于中国历史文化名城——江苏省苏州市，是江苏省属重点综合性大学，国家国防科技工业局与江苏省人民政府共建高校、[1]  国家“211工程”重点建设高校、“2011计划”首批牵头高校，入选首批”国家大学生创新性实验计划”高校之一、“国家建设高水平大学公派研究生项目”、“海外高层次人才引进计划”，同时也是国家教育部“卓越医生教育培养计划”、“卓越工程师教育培养计划”、“卓越法律人才教育培养计划”改革试点高校。
+										</div>
+									</div>
+									<div class="L_vote_bpho">
+										<p>靓照</p>
+										<ul>
+											<li><img src="common/images/L_sunSpot.jpg"/></li>
+											<li><img src="common/images/L_sunSpot.jpg"/></li>
+											<li><img src="common/images/L_sunSpot.jpg"/></li>
+											<li><img src="common/images/L_sunSpot.jpg"/></li>
+										</ul>
+									</div>
+									<div class="L_vote_video">
+										<p>视频</p>
+										<ul>
+											<li>
+												<a href="http://baidu.boosj.com/watch/1720887755390111628.html?page=videoMultiNeed" target="_blank" class="L_view_box" title="和一群不懂我的TA，即使狂欢">
+													<span class="L_view_v" target="_blank">
+														<img class="L_video_img_v" src="common/images/L_video.png" alt="和一群不懂我的TA，即使狂欢"/>
+														<span class="L_play_v"></span>
+													</span>
+													<span class="L_title_video_v">和一群不懂我的TA，即使狂欢</span>
+												</a>
+											</li>
+													<li>
+												<a href="#" target="_blank" class="L_view_box" title="和一群不懂我的TA，即使狂欢">
+													<span class="L_view_v" target="_blank">
+														<img class="L_video_img_v" src="common/images/L_video.png" alt="和一群不懂我的TA，即使狂欢"/>
+														<span class="L_play_v"></span>
+													</span>
+													<span class="L_title_video_v">和一群不懂我的TA，即使狂欢</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+			          </div>
+			        <div class="modal-footer" >
+	                    <a data-dismiss="modal">取消</a>
+	                    <a>确定</a>
+		        	</div>
+		    	</div>
+			</div>
+		</div>
+		
+	    <footer>
+        <!--分页-->
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+<script src="common/js/L_editA.js"></script>
+<script src="common/js/addVoterm.js"></script>

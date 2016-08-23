@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="common/css/style.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/swiper-3.3.1.min.css" />
+    <title>活动详情 现场照片</title>
+</head>
+<body>
+<div id="pHead2"></div>
+
+<div class="L_detailPro">
+	您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">2016黑白键钢琴系列?菁英 法国钢琴家海米?帕诺希安独音乐会 </a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">晒现场</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">现场照片</a></span>
+</div>
+<div class="L_detail_photo">
+	
+		<div class="L_photo_content">
+			<div class="L_play_photo">
+				<!--<img src="common/images/L_fullscript.png" id="L_full_play"/>-->
+						    <!--下拉按钮-->
+				<select id="L_downs">
+					<option>5秒</option>
+					<option>10秒</option>
+					<option>20秒</option>
+				</select>
+				<!--<img src="common/images/L_down.png" id="L_downs"/>-->
+				<img src="common/images/L_pre_play.png"  id="L_pre_play"/>
+				<img src="common/images/L_stop_play.png" id="L_stop_play" data-Stop='1'/>
+				<img src="common/images/L_next_play.png" id="L_next_play"/>
+				<img src="common/images/L_detail.png" id="L_detail" onclick="javascript:window.location.href='sharePhoto.html'"/>
+			</div>
+		    <!-- Swiper -->
+		    <div class="swiper-container gallery-top">
+		        <div class="swiper-wrapper" id="L_slideImg">
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail03.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail04.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail05.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail01.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_photo1.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_photo2.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail03.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail04.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail05.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail01.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_photo1.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_photo2.png)"></div>
+					<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+		        </div>
+		    </div>
+			<!--缩略图-->
+				<div class="swiper-container gallery-thumbs">
+			        <div class="swiper-wrapper" id="L_slideSmall">
+			            <div class="swiper-slide" id="L_sel" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail03.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail04.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail05.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail01.jpg)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_photo1.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_photo2.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			            	<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail03.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail04.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail05.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail01.jpg)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_photo1.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_photo2.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			        </div>
+
+			    </div>
+
+			</div>
+				<!-- Add Arrows -->
+		        <div class="swiper-button-prev swiper-button-white"><img src="common/images/L_next.png" id="L_next"/></div>
+		        <div class="swiper-button-next swiper-button-white"><img src="common/images/L_pre.png" id="L_pre" /></div>
+		        <!-- 如果需要分页器 -->
+    			<div class="swiper-pagination"></div>
+		</div>
+</div>
+<div id="pFooter"></div>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="common/js/publicContainer.js"></script>
+<script src="bower_components/Swiper/dist/js/swiper.jquery.min.js"></script>
+<script src="common/js/photoDetail.js"></script>
+</html>

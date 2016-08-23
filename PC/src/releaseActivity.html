@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发布活动</title>
+		<link rel="stylesheet" href="common/css/reset.min.css" />
+		<link rel="stylesheet" href="common/css/style.css" />
+	</head>
+	<body bgcolor="#f7f7f7">
+		<!--公用头部-->
+		<!--<div id="pHead2"></div>-->
+		<header class="L_HuoHeader">
+			<!--<div>-->
+				<div class="L_header_info">
+					<div>
+					欢迎来到苏州大学文学院理学院苏州大学文学院理学院！
+					<button>切换大学</button>
+					</div>
+				</div>
+			    <div class="L_header_img">
+					<div>
+			        <img class="Logo" src="common/images/LOGO.png">
+			        <ul>
+			        	<li>活动</li>
+			        	<li>部落</li>
+			        	<li>申请学分</li>
+			        	<li>积分商城</li>
+			        </ul>
+			        <ul class="L_header_R">
+						<li>
+							<img src="common/images/touxiang.png"/>
+						</li>
+						<li>
+							<img src="common/images/message.png" />
+						</li>
+						<li>
+							<img src="common/images/search.png" />
+						</li>
+		
+					</ul>
+			    </div>
+			</div>
+		
+		</header>
+		<div class="L_huomulu">
+			您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;活动&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span>发布活动</span>
+		</div>
+		<div class="L_huotype">
+			<div>
+				<img src="common/images/type.png" />&nbsp;&nbsp;&nbsp;类型
+			</div>
+			<ul class="L_huoitems">
+				<li data-checked="false">
+					<div><img src="common/images/gou.png"></div><span>PU活动</span>
+				</li>
+				<li data-checked="true">
+					<div><img src="common/images/gou.png"></div><span>全省活动</span>
+				</li>
+				<li data-checked="true">
+					<div><img src="common/images/gou.png"></div><span>本校活动</span>
+				</li>
+			</ul>
+		</div>
+		<div class="L_huodetails">
+			<div class="L_huotitle">
+				<img src="common/images/type.png" />&nbsp;&nbsp;&nbsp;基本信息
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>名称</p>
+					<p><input type="text" placeholder="请输入活动名称，1——30字符" /></p>
+				</div>
+				<div>
+					<p><span>*</span>地点</p>
+					<p><input type="text" placeholder="请输入活动地点" /></p>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>开始时间<span style="color:#DDDDDD ;">&nbsp;&nbsp;填写时默认活动发起即开始</span></p>
+					<p><input type="input" value="2016-05-17" /></p>
+				</div>
+				<div>
+					<p><span>*</span>结束时间</p>
+					<p><input type="input" value="2015-12-17"" /></p>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>活动面向</p>
+					<p>
+						<select>
+							<option>电子学院</option>
+							<option>工商学院</option>
+						</select>
+					</p>
+
+					<!--<p style="margin-top: 10px;border: 1px solid #DDDDDD;width: 333px;height:32px;border-radius: 5px;">
+						<span id="L_huomember" style="width: 95%;overflow: hidden;line-height: 32px;margin-left: 12px;color: #000000;"></span>
+						<select onchange="choice(this)" style="width: 333px;position: absolute;top: 595px;left: 362px;opacity: 0;">
+							<option value="电子学院" >电子学院</option>
+							<option value="22">2</option>
+							<option value="33">3</option>
+						</select>
+						<span><img src="common/images/Hup.png" style="float:right;margin-right:10px;margin-top: 10px;"/></span></p>-->
+				</div>
+				<div>
+					<p>&nbsp;</p>
+					<p>
+						<select>
+							<option>2016级</option>
+							<option>2015级</option>
+						</select>
+					</p>
+					<!--<p style="margin-top: 10px;border: 1px solid #DDDDDD;width: 333px;height:32px;border-radius: 5px;">
+						<span id="L_huomember2" style="width: 95%;overflow: hidden;line-height: 32px;margin-left: 12px;color: #000000;"></span>
+						<select onchange="choice2(this)" style="width: 333px;position: absolute;top: 595px;left: 779px;opacity: 0;">
+							<option value="2016级">2016级</option>
+							<option value="22">2</option>
+							<option value="33">3</option>
+						</select>
+						<span><img src="common/images/Hup.png" style="float:right;margin-right:10px;margin-top: 10px;"/></span></p>-->
+				</div>
+			</div>
+			<div class="L_huomessage L_huoPhoto">
+				<div>
+					<p><span>*</span>活动海报</p>
+					<ul>
+						<li>
+							<img src="common/images/u65.png" class="wk_icon" id="icon">
+							<p>选择照片</p>
+							<input type="file" id="file" onchange="UploadImg()"/>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>活动详情</p>
+					<p><textarea rows="6" style="margin-top: 10px;width: 750px;border: 1px solid #DDDDDD;resize: none; text-indent: 1em;padding: 10px;"></textarea></p>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p>活动人数</p>
+					<p><input type="text" placeholder="活动人数上线，填整数或无限制" /></p>
+				</div>
+				<div>
+					<p>联系方式</p>
+					<p><input type="text" placeholder="如：张小姐 1505045XXXX" /></p>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p>活动选项</p>
+					<ul class="L_huoPeaple">
+						<li data-checked="false">
+							<div><img src="common/images/gou.png"></div><span>报名活动需要审批</span>
+						</li>
+						<li data-checked="true">
+							<div><img src="common/images/gou.png"></div><span>报名活动需要填写联系电话</span>
+						</li>
+						<li data-checked="true">
+							<div><img src="common/images/gou.png"></div><span>不报名也可签到</span>
+						</li>
+						<li data-checked="true">
+							<div><img src="common/images/gou.png"></div><span>打开投票功能</span>
+						</li>
+						<li data-checked="true">
+							<div><img src="common/images/gou.png"></div><span>打开签退功能</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p>定时上线</p>
+					<p><input type="text"  /></p>
+				</div>
+			</div>
+			<div class="L_huomessage L_huoapply">
+				<div>
+					<p><span>*</span>活动类型</p>
+					<p>
+						<select>
+							<option selected="selected">请选择活动类型</option>
+							<option>活动A</option>
+						</select>
+					</p>
+				</div>
+				<div>
+					<p><span>*</span>归属部落</p>
+					<p>
+						<select>
+							<option selected="selected">电子学院</option>
+							<option>活动A</option>
+						</select>
+					</p>
+				</div>
+				<div>
+					<p><span>*</span>归属组织</p>
+					<p>
+						<select>
+							<option selected="selected">电子学院</option>
+							<option>活动A</option>
+						</select>
+					</p>
+				</div>
+				<div>
+					<p><span>*</span>审核人</p>
+					<p>
+						<select>
+							<option selected="selected">电子学院</option>
+							<option>活动A</option>
+						</select>
+					</p>
+					<!--<p style="margin-top: 10px;border: 1px solid #DDDDDD;width: 180px;height:32px;border-radius: 5px;">
+						<span id="L_huomember4" style="width: 95%;overflow: hidden;line-height: 32px;margin-left: 12px;color: #000000;">电子学院</span>
+						<select onchange="choice4(this)" style="width: 180px;position: absolute;top: 1120px;left: 517px;opacity: 0;">
+							<option value="电子学院" >电子学院</option>
+							<option value="22">2</option>
+							<option value="33">3</option>
+						</select>
+						<span><img src="common/images/Hup.png" style="float:right;margin-right:10px;margin-top: 10px;"/></span></p>-->
+				</div>
+			</div>
+		</div>
+		<div class="L_huodetails2">
+			<div class="L_huotitle">
+				<img src="common/images/type.png" />&nbsp;&nbsp;&nbsp;报名信息
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>报名开始时间<span style="color:#DDDDDD ;">&nbsp;&nbsp;填写时默认活动发起即开始</span></p>
+					<p><input type="text" placeholder="报名开始时间" /></p>
+				</div>
+				<div>
+					<p><span>*</span>报名结束时间</p>
+					<p><input type="text" placeholder="报名结束时间" /></p>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p>报名费用</p>
+					<ul class="L_huoMoney">
+						<li data-checked="false">
+							<div><img src="common/images/gou.png"></div><span>免费</span>
+						</li>
+						<li data-checked="true">
+							<div><img src="common/images/gou.png"></div><span>收费</span>&nbsp;&nbsp;&nbsp;<input type="text" style="line-height: 20px;" />元
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>活动签名</p>
+					<div id="L_textarea" rows="1" style="width: 760px;height:45px;margin-top: 10px;resize: none;border: 1px solid #DDDDDD;border-radius: 5px;text-indent: 2em;line-height: 40px;"></div>
+					<p id="L_sign">
+	                   <span class="L_On" id="L_On">123</span>
+	                   <span>演唱会</span>
+	                   <span>123</span>
+	                   <span>演唱会</span>
+               		</p>
+				</div>
+			</div>
+		</div>
+		<!--公用底部-->
+		<!--<div id="pFooter"></div>-->
+		<footer class="h_PublicFooter">
+		    <div>
+		    <div class="h_PuFo_InFo">
+		        <p class="h_PuFo_Info">
+		            <a>关于PU</a>
+		            <a>使用帮助</a>
+		            <a>联系我们</a>
+		            <a>客服中心</a>
+		        </p>
+		        <p>
+		            <span>
+		                PocketUni版权所有 苏ICP备12046592号-2<img class="h_PuFo_trust" src="common/images/PublicFoot_img.png">
+		            </span>
+		        </p>
+		    </div>
+		    <div class="h_PuFo_Img">
+		        <div>
+		            <img src="common/images/u74.jpg">
+		            <p>APP下载</p>
+		        </div>
+		        <div>
+		            <img src="common/images/u76.jpg">
+		            <p>微信公众号</p>
+		        </div>
+		    </div>
+		
+		    </div>
+		</footer>
+	</body>
+</html>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="common/js/publicContainer.js"></script>
+<script src="common/js/releaseA.js"></script>

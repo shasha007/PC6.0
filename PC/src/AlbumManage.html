@@ -1,0 +1,65 @@
+<!--
+Created by huqiwen on 16/8/3. 部落相册管理
+describe : 
+-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-cn">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="common/css/reset.min.css" rel="stylesheet">-->
+    <!--<link href="common/css/style.css" rel="stylesheet">-->
+    <!--<title>活动详情</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--主体内容-->
+<div class="H_Album_Manage clearfix">
+    <div class="clearfix">
+        <button class="H_Album_Manage_AddBtn">创建相册</button>
+    </div>
+    <div class="H_Album clearfix">
+        <div class="row">
+            <!--NO1-->
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <!--下拉按钮-->
+                <div class="H_Album_Btn">
+                    <button type="button" class="btn btn-default dropdown-toggle"
+                            data-toggle="dropdown">
+                        <img src="common/images/H_down_arrow.png">
+                    </button>
+                    <ul class="dropdown-menu" role="menu" data-albumid="1">
+                        <li class="H_AlbumManage_BtnEdit"><a>编辑</a></li>
+                        <li class="H_AlbumManage_BtnDel"><a>删除</a></li>
+                    </ul>
+                </div>
+                <!--相册封面-->
+                <div data-AlbumId="1"  class="thumbnail">
+                    <img src="common/images/h_alnum1.png">
+                </div>
+                <!--相册数目-->
+                <div class="H_Album_Num">
+                    367
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="H_Foot_pagination">
+        <!--分页-->
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </footer>
+</div>
+<script src="common/js/AlbumManage.js"></script>
+</div>
+
+<!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->

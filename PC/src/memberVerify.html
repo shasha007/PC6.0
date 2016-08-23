@@ -1,0 +1,120 @@
+
+<body>
+<!--<div id="pHead2"></div>-->
+
+<div class="L_AG_Mem">
+	您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">活动管理</a></span>
+</div>
+<div class="L_AG_Content">
+
+ <div class="L_NumM_Con clearfix">
+            <!--头部-->
+            <div class="clearfix">
+                <p>
+					共<span>16</span>个成员  签到<span>1</span>人
+                </p>
+                <!--搜索-->
+                <div class="L_NumM_Search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="姓名：">
+				       <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                      搜索
+                  </button>
+                 </span>
+                    </div>
+                </div>
+                <div class="L_NumM_right">
+	                 <a href="#"  data-toggle="modal" data-target="#L_NM_Album">批量签到</a>
+	                <a href="#" data-toggle="modal" data-target="#L_NM_Album">签到全部成员</a>
+	                <button type="button" data-toggle="modal" data-target="#L_NM_Member">导入成员
+	            	</button>
+	            	<button type="button">导出excel</button>
+                </div>
+
+            </div>
+            <!--成员列表-->
+
+            <div class="L_NumM_Li">
+			    <table  class="table" >
+			        <thead class="L_NumM_LiTit">
+				      <tr>
+				      	 <th style="text-align: center;"><input type="checkbox"></th>
+				      	 <th style="text-align: center;vertical-align:middle;" class="sorting">UID</th>
+				         <th style="text-align: center;vertical-align:middle;">姓名</th>
+				         <th style="text-align: center;vertical-align:middle;">诚信度</th>
+				         <th style="text-align: center;vertical-align:middle;">性别</th>
+				         <th style="text-align: center;vertical-align:middle;">学校</th>
+				         <th style="text-align: center;vertical-align:middle;">操作</th>
+				      </tr>
+			        </thead>
+			        <tbody class="L_NumM_tbody">
+			        <tr>
+				      	 <th style="text-align: center;"><input type="checkbox"></th>
+				      	 <td>2967116</td>
+				         <td>zsa</td>
+				         <td>暂无</td>
+				         <td><img src="common/images/L_boy.png" /></td>
+				         <td>西交利物浦大学</td>
+				         <td>
+				         	<p><a href="#">通过</a></p>
+				         	<p><a href="#">拒绝</a></p>
+				         </td>
+			        </tr>
+			        </tbody>
+			
+			    </table>
+			</div>
+
+	            <!--弹出框-->
+    <div class="modal fade" id="L_NM_Album">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p>是否为所有成员签到？</p>
+                <div>
+                    <a data-dismiss="modal" class="L_NM_AlbumC">取消</a>
+                    <a class="L_NM_AlbumO">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+
+<!--弹出框2-->
+	<div class="modal fade" id="L_NM_Member" >
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+		          <div class="modal-body small L_file-box">
+		            <p style="font-size: 18px;color: #CCCCCC;">导入活动成员</p>
+		            <p>导入模板下载：下载模板</p>
+		            <!--<p>选择文件：
+		            	<input type="file" value="浏览..." id="L_moFile" accept=".xls,.xlsx,.doc,.txt,.pdf"/>
+		            </p>-->
+		           <p>选择文件：
+		            <input type='text' name='textfield' id='textfield' class='L_txt' /> 
+					<input type='button' class='L_file_btn' value='浏览...' />
+					<input type="file" name="fileField" class="L_mofile" id="fileField" size="28" accept=".xls,.xlsx,.doc,.txt,.pdf" onchange="document.getElementById('textfield').value=this.value" />
+					</p> 
+		          </div>
+		        <div class="modal-footer" >
+                    <a data-dismiss="modal">取消</a>
+                    <a>确定</a>
+	        	</div>
+	    	</div>
+		</div>
+	</div>
+	
+	    <footer>
+        <!--分页-->
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </footer>
+</div>
+</body>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+	<link href="bower_components/square/blue.css" />
+    <title>管理活动——活动成员</title>
+    <style>
+    .L_AG_Content{
+    	max-width: 1080px;
+    	margin: 0 auto;
+    }
+    	.L_AG_Mem{
+			max-width: 1080px;
+			margin: 20px auto;
+			padding-bottom: 20px;
+			font-size: 14px;
+			color: #C8CCD7;
+			border-bottom: 1px solid #DDDDDD;
+			overflow: hidden;
+		}
+		.L_AG_Mem a{
+			color: #000000;
+		}
+		.L_AG_Mem a:hover{
+			color: #ea5504;
+		}
+		/*.L_rank_populary .pagination{
+			max-width: 1080px;
+			margin: 20px auto;
+			padding-left: 400px;
+		}*/
+		.L_NumM_Con{
+			width: 100%;
+		}
+		.L_NumM_Con >div:nth-child(1){
+			padding: 10px 5px;
+			border-bottom: 1px solid #dcdcdc;
+			background-color: #eaeff7;
+			text-align: center;
+		}
+		.L_NumM_Con >div >p{
+			display: inline-block;
+			height: 40px;
+			float: left;
+			line-height: 40px;
+		}
+		.L_NumM_Con >div >p span{
+			color: #ea5504;
+		}
+		.L_NumM_right{
+			display: inline-block;
+			float: right;
+			line-height: 40px;
+		}
+		.L_NumM_right a{
+			margin-left: 30px;
+		}
+		.L_NumM_right button{
+			margin-left: 30px;
+		}
+		.L_NumM_Search{
+			display: inline-block;
+			width: 230px;
+			height: 32px;
+			margin-left: 30px;
+			line-height: 40px;
+		}
+		.L_NumM_Search .form-control{
+			height: 30px;
+			margin: 5px 0;
+			border: 1px solid #f2f2f2;
+		}
+		.L_NumM_Search .input-group-btn>.btn{
+			padding: 4px 12px;
+			border: 1px solid #f2f2f2;
+		}
+		
+		.L_NumM_LiTit{
+			display: flex;
+			width: 100%;
+			height: 60px;
+			background: #eaeff7;
+			line-height: 60px;
+		}
+		.L_NumM_Li{
+			margin-top: 20px;
+		}
+		.L_NumM_LiTit input{
+			width: 18px;
+			height: 18px;
+			margin: 24px 10px;
+		}
+		.L_NumM_LiTit{
+			border: 1px solid #dcdcdc;
+		}
+		.L_NumM_Li ul{
+			border-right: 1px solid #f2f2f2;
+			border-left: 1px solid #f2f2f2;
+		}
+		.L_NumM_LiTit span{
+			flex: 1;
+			text-align: center;
+		}
+		.L_NumM_LiTit span:nth-child(1){
+			flex: 2;
+			padding: 0 30px;
+			text-align: left;
+		}
+		.L_NumM_Li li{
+			display: flex;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			border-bottom: 1px solid #f2f2f2;
+		}
+
+		.L_NumM_Li li >span:nth-child(1){
+		
+			padding: 0 30px 0 12px;
+			text-align: left;
+		}
+		.L_NumM_Li li >span:nth-child(2){
+			padding-left: 18px;
+		}
+		.L_NumM_Li li >span:nth-child(1) >input[type=checkbox]{
+			width: 18px;
+			height: 18px;
+		}
+		.L_NumM_Li li >span:nth-child(1)>i{
+			display: inline-block;
+			height: 40px;
+			padding-left: 20px;
+			line-height: 68px;
+			overflow: hidden;
+		}
+		.L_NumM_Li li >span:nth-child(5) >a {
+			display: block;
+			height: 20px;
+			margin-top: 20px;
+			line-height: 20px;
+		}
+    </style>
+</head>
+<body>
+<div id="pHead2"></div>
+
+<div class="L_AG_Mem">
+	您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">活动管理</a></span>
+</div>
+<div class="L_AG_Content">
+
+ <div class="L_NumM_Con clearfix">
+            <!--头部-->
+            <div class="clearfix">
+                <p>
+					共<span>16</span>个成员  签到<span>1</span>人
+                </p>
+                <!--搜索-->
+                <div class="L_NumM_Search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="姓名：">
+				       <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                      搜索
+                  </button>
+                 </span>
+                    </div>
+                </div>
+                <div class="L_NumM_right">
+	                 <a href="#">批量签到</a>
+	                <a href="#">签到全部成员</a>
+	                <button type="button" class="btn btn-primary">导入成员</button>
+	                <button type="button" class="btn btn-default">导出excel</button>
+                </div>
+
+            </div>
+            <!--成员列表-->
+            <div class="L_NumM_Li">
+                <div class="L_NumM_LiTit">
+                	<input type="checkbox">
+                    <span>UID</span>
+                    <span>姓名</span>
+                    <span>诚信度</span>
+                    <span>是否签到</span>
+                    <span>性别</span>
+                    <span>学校</span>
+                    <span>学号</span>
+                    <span>备注</span>
+                    <span>附加实践学分</span>
+                    <span>加积分</span>
+                    <span>操作</span>
+                </div>
+                <ul>
+                    <li data-UserId="1">
+                        <span>
+                            <input type="checkbox" data-UserId="1">
+                           	<i>2967116</i>
+                            
+                        </span>
+                         <span> 陈小二
+                        </span>
+                          <span>100
+                        </span>
+                          <span>
+                          YES
+                        </span>
+                        <span>
+                        	<img />
+                        </span>
+                        <span>
+                        </span>
+                    </li>
+                    <li data-UserId="1">
+                        <span>
+                            <input type="checkbox" data-UserId="1">
+                            
+                            <i>暴走暴走的小白暴走的小白的小白</i>
+                        </span>
+                         <span>
+                           主席
+                        </span>
+                          <span>
+                         院系
+                        </span>
+                          <span>
+                          18818881888
+                        </span>
+                        <span>
+                        </span>
+                        <span>
+                            ???
+                        </span>
+                    </li>
+                </ul>
+            </div>
+	    <!--<table  class="display table table-bordered table-striped" id="dynamic-table">
+	        <thead>
+		      <tr>
+		      	 <th style="text-align: center;"><input type="checkbox"></th>
+		      	 <th class="sorting">ID</th>
+		         <th>用户信息</th>
+		         <th>学校</th>
+		         <th>用户组</th>
+		      </tr>
+	        </thead>
+	        <tbody>
+	        <tr class="gradeX">
+		      	 <th style="text-align: center;"><input type="checkbox"></th>
+		      	 <td>Tanmay3</td>
+		         <td>Tanmay4</td>
+		         <td>Bangalore1</td>
+		         <td>560003</td>
+	        </tr>
+	        <tr class="gradeC">
+		      	 <th style="text-align: center;"><input type="checkbox"></th>
+		      	 <td>Tanmay2</td>
+		         <td>Tanmay1</td>
+		         <td>Bangalore3</td>
+		         <td>560001</td>
+	        </tr>
+	        </tbody>
+	
+	    </table>-->
+
+
+	    <footer>
+        <!--分页-->
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/publicContainer.js"></script>

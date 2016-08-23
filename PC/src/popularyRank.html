@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <title>人气排行</title>
+</head>
+<body>
+<!--<div id="pHead2"></div>-->
+<header class="L_HuoHeader">
+	<!--<div>-->
+		<div class="L_header_info">
+			<div>
+			欢迎来到苏州大学文学院理学院苏州大学文学院理学院！
+			<button>切换大学</button>
+			</div>
+		</div>
+	    <div class="L_header_img">
+			<div>
+	        <img class="Logo" src="common/images/LOGO.png">
+	        <ul>
+	        	<li>活动</li>
+	        	<li>部落</li>
+	        	<li>申请学分</li>
+	        	<li>积分商城</li>
+	        </ul>
+	        <ul class="L_header_R">
+				<li>
+					<img src="common/images/touxiang.png"/>
+				</li>
+				<li>
+					<img src="common/images/message.png" />
+				</li>
+				<li>
+					<img src="common/images/search.png" />
+				</li>
+
+			</ul>
+	    </div>
+	</div>
+
+</header>
+
+<div class="L_rankPopulary">
+	<div>
+		您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">2016黑白键钢琴系列?菁英 法国钢琴家海米?帕诺希安独音乐会 </a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">人气排行</a></span>
+	</div>
+</div>
+<div class="L_rank_populary">
+	
+	<div class="L_rankRule">
+	投票规则：每人每天投5票，投完所有票数即生效。可每日重复投票。
+	</div>
+	<ul class="L_rankDetail">
+		<li>
+			<img src="common/images/L_rank01.png"/>
+			<p>国旗护卫队</p>
+			<p>苏州大学</p>
+			<p>14票</p>
+			<button class="L_vote_btn" data-groupid="1" data-toggle="modal" data-target="#myModal2">投TA一票</button>
+		</li>
+		<li>
+			<img src="common/images/L_rank01.png"/>
+			<p>国旗护卫队</p>
+			<p>苏州大学</p>
+			<p>14票</p>
+			<button class="L_vote_btn" data-groupid="2"  data-toggle="modal" data-target="#myModal">投TA一票</button>
+		</li>
+		<li>
+			<img src="common/images/L_rank03.png"/>
+			<p>国旗护卫队</p>
+			<p>苏州大学</p>
+			<p>14票</p>
+			<button class="L_vote_btn" data-groupid="3"  data-toggle="modal" data-target="#myModal">投TA一票</button>
+		</li>
+		<li>
+			<img src="common/images/L_rank04.png"/>
+			<p>国旗护卫队</p>
+			<p>苏州大学</p>
+			<p>14票</p>
+			<button class="L_vote_btn" data-groupid="4"  data-toggle="modal" data-target="#myModal">投TA一票</button>
+		</li>
+		<li>
+			<img src="common/images/L_rank01.png"/>
+			<p>国旗护卫队</p>
+			<p>苏州大学</p>
+			<p>14票</p>
+			<button class="L_vote_btn" data-groupid="5"  data-toggle="modal" data-target="#myModal">投TA一票</button>
+		</li>
+		<li>
+			<img src="common/images/L_rank01.png"/>
+			<p>国旗护卫队</p>
+			<p>苏州大学</p>
+			<p>14票</p>
+			<button class="L_vote_btn" data-groupid="6"  data-toggle="modal" data-target="#myModal">投TA一票</button>
+		</li>
+		<li>
+			<img src="common/images/L_rank03.png"/>
+			<p>国旗护卫队</p>
+			<p>苏州大学</p>
+			<p>14票</p>
+			<button class="L_vote_btn L_voted" data-groupid="7"  data-toggle="modal" data-target="#myModal">票已投完</button>
+		</li>
+		<li>
+			<img src="common/images/L_rank04.png"/>
+			<p>国旗护卫队</p>
+			<p>苏州大学</p>
+			<p>14票</p>
+			<button class="L_vote_btn L_voted" data-groupid="8"  data-toggle="modal" data-target="#myModal">已投</button>
+		</li>
+	</ul>
+	    <footer>
+        <!--分页-->
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </footer>
+</div>
+<!--弹出框-->
+	<div class="modal fade" id="myModal" >
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+		          <div class="modal-body small">
+		            <p>你确定要投票给2号选手？</p>
+		          </div>
+		        <div class="modal-footer" >
+		            <button type="button" class="btn btn-primary ok" data-dismiss="modal">确定</button>
+		            <button type="button" class="btn btn-default cancel" data-dismiss="modal">取消</button>
+	        	</div>
+	    	</div>
+		</div>
+	</div>
+	<!--弹框2-->
+		<div class="modal fade" id="myModal2" >
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+		          <div class="modal-body small">
+		            <p><img src="common/images/L_erro.png" />该活动不向您所在的学校开放投票</p>
+		          </div>
+	    	</div>
+		</div>
+	</div>
+		<!--弹框3-->
+	<div class="modal fade" id="myModal3" >
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+		          <div class="modal-body small">
+		            <p><img src="common/images/L_gou.png" />投票成功！投满3票才生效，还差（1）票！</p>
+		          </div>
+	    	</div>
+		</div>
+	</div>
+			<!--弹框4-->
+	<div class="modal fade" id="myModal4" >
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+		          <div class="modal-body small">
+		            <p><img src="common/images/L_warn.png" />您今日还剩5票未投</p>
+		          </div>
+	    	</div>
+		</div>
+	</div>
+<!--<div id="pFooter"></div>-->
+<footer class="h_PublicFooter">
+    <div>
+    <div class="h_PuFo_InFo">
+        <p class="h_PuFo_Info">
+            <a>关于PU</a>
+            <a>使用帮助</a>
+            <a>联系我们</a>
+            <a>客服中心</a>
+        </p>
+        <p>
+            <span>
+                PocketUni版权所有 苏ICP备12046592号-2<img class="h_PuFo_trust" src="common/images/PublicFoot_img.png">
+            </span>
+        </p>
+    </div>
+    <div class="h_PuFo_Img">
+        <div>
+            <img src="common/images/u74.jpg">
+            <p>APP下载</p>
+        </div>
+        <div>
+            <img src="common/images/u76.jpg">
+            <p>微信公众号</p>
+        </div>
+    </div>
+
+    </div>
+</footer>
+</body>
+
+</html>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/publicContainer.js"></script>

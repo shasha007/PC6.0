@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="common/css/style.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/swiper-3.3.1.min.css" />
+    <title>活动详情 现场照片</title>
+    <style>
+    	.L_detailPro{
+			max-width: 1080px;
+			margin: 20px auto;
+			padding-bottom: 20px;
+			font-size: 14px;
+			color: #C8CCD7;
+			border-bottom: 1px solid #DDDDDD;
+			overflow: hidden;
+		}
+		.L_detailPro a{
+			color: #000000;
+		}
+		.L_detailPro a:hover{
+			color: #ea5504;
+		}
+		
+		
+		
+		*{margin: 0;padding: 0;border: 0;}
+		ul,li{list-style: none;}
+		img{max-width: 100%;}
+		
+		.L_photo_content{
+			
+			height: 768px;
+			overflow: hidden;
+			margin: 0 auto;
+			position: relative;
+		}
+		/*.L_photo_content div:nth-child(2){
+			width: 100%;
+			height: 488px;
+			position: relative;
+		}*/
+		.L_slideImg{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: absolute;
+			left: 0;
+			top:0;
+		}
+		.L_slideImg li{
+			width: 997px;
+			height: 100%;
+			float: left;
+			display: none;
+		}
+		.L_slideImg li:first-child{display: block;}
+		.L_slideImg img,.L_slideSmall li img{height: 100%;width: 100%;}
+		.L_slideSmall{
+			width: auto;
+			height: auto;
+			overflow: hidden;
+			position: absolute;
+			left: 100px;
+		}
+		.L_slideSmall li{
+			width: 100px;
+			height: 100px;
+			border: 2px solid transparent;
+			float: left;
+			margin-left: 10px;
+			margin-top: 30px;
+			cursor: pointer;
+		}
+		.L_slideSmall li{
+			opacity: 0;
+		}
+		.L_slideSmall li:nth-child(1),.L_slideSmall li:nth-child(2),.L_slideSmall li:nth-child(3),.L_slideSmall li:nth-child(4),.L_slideSmall li:nth-child(5),.L_slideSmall li:nth-child(6),.L_slideSmall li:nth-child(7){
+			opacity: 1;
+		}
+		.L_slideSmall li:first-child{margin-left: 0;}
+		.L_slideSmall li.L_sel{border: 3px solid orangered;}
+		.L_pre_photo{
+			float: left;
+			margin-top: 60px;
+		}
+		.L_next_photo{
+			float: right;
+			margin-top: 60px;
+		}
+		.L_play_photo{
+			width: 997px;
+			margin: 0px auto;
+		}
+		.L_imgs{
+			width: 997px;
+			height: 768px;
+			overflow: hidden;
+			margin: 60px auto;
+			position: relative;
+		}
+		.L_play_photo img{
+			margin-left: 20px;
+		}
+		#L_pre:hover{
+			src: url(common/images/L_pre_mouseOver.png);
+		}
+		
+	/*html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #000;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }*/
+    .swiper-container {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+    	width: 100%;
+    	height: 100%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .gallery-top {
+        height: 65%;
+        width: 100%;
+    }
+    .gallery-thumbs {
+    	width: 100%;
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+    .gallery-thumbs .swiper-slide {
+        width: 12%;
+        height: 100%;
+        /*opacity: 0.4;*/
+       border: none;
+    }
+    .gallery-thumbs .swiper-slide-active {
+        /*opacity: 1;*/
+       border: 3px solid orangered;
+    }
+	.swiper-wrapper{
+		height: 100%;
+		/*width: 100%;*/
+		display: inline-flex;
+		overflow: hidden;
+	}
+	.gallery-thumbs .swiper-wrapper{
+		width: 2000px;
+		margin-left: -434.5px;
+	}
+	.swiper-button-next{
+		/*height: 20%;
+		width: 20%;
+		position: absolute;
+    top: 90%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    margin-left: -30px;
+    z-index: 10;
+    cursor: pointer;
+    -moz-background-size: 27px 44px;
+    -webkit-background-size: 27px 44px;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;*/
+
+    width: 35px;
+    height: 44px;
+    float: left;
+    position: absolute;
+    top: 850px;
+    left: 24%;
+	}
+	.swiper-button-prev{
+		width: 35px;
+	    height: 44px;
+	    /*float: right;*/
+	    position: absolute;
+    	top: 850px;
+    	left: 74%;
+	}  
+	.L_slideSmall div#L_sel{border: 3px solid orangered;} 
+	.L_play_photo select{
+		width: 100px;
+		height: 30px;
+		background-color: #F2F2F2;
+		border: none;
+		border-radius: 5px;
+		text-indent: 1em;
+		color: #85888F;
+	}    
+    </style>
+</head>
+<body>
+<div id="pHead2"></div>
+
+<div class="L_detailPro">
+	您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">2016黑白键钢琴系列?菁英 法国钢琴家海米?帕诺希安独音乐会 </a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">晒现场</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">现场照片</a></span>
+</div>
+<div class="L_detail_photo">
+	
+		<div class="L_photo_content">
+			<div class="L_play_photo">
+				<img src="common/images/L_fullscript.png" id="L_full_play"/>
+						    <!--下拉按钮-->
+				<select id="L_downs">
+					<option>5秒</option>
+					<option>10秒</option>
+					<option>20秒</option>
+				</select>
+				<!--<img src="common/images/L_down.png" id="L_downs"/>-->
+				<img src="common/images/L_pre_play.png"  id="L_pre_play"/>
+				<img src="common/images/L_stop_play.png" id="L_stop_play" data-Stop='1'/>
+				<img src="common/images/L_next_play.png" id="L_next_play"/>
+				<img src="common/images/L_detail.png" id="L_detail"/>
+			</div>
+			
+			<div class="L_imgs">
+				<!-- Swiper -->
+			    <div class="swiper-container gallery-top">
+			        <div class="swiper-wrapper" id="L_slideImg">
+			           <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail03.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail04.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail05.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail01.jpg)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_photo1.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_photo2.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			            	<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+				            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail03.png)"></div>
+				            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail04.png)"></div>
+				            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail05.png)"></div>
+				            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail01.jpg)"></div>
+				            <div class="swiper-slide" style="background-image:url(common/images/L_photo1.png)"></div>
+				            <div class="swiper-slide" style="background-image:url(common/images/L_photo2.png)"></div>
+				            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			        </div>
+			    </div>
+			<!--缩略图-->
+				<div class="swiper-container gallery-thumbs">
+			        <div class="swiper-wrapper" id="L_slideSmall">
+			            <div class="swiper-slide" id="L_sel" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail03.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail04.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail05.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail01.jpg)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_photo1.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_photo2.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			            	<div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail03.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail04.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail05.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail01.jpg)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_photo1.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_photo2.png)"></div>
+			            <div class="swiper-slide" style="background-image:url(common/images/L_phtoDetail02.png)"></div>
+			        </div>
+
+			    </div>
+			</div>
+
+
+			</div>
+				<!-- Add Arrows -->
+		        <div class="swiper-button-prev swiper-button-white"><img src="common/images/L_next.png" id="L_next"/></div>
+		        <div class="swiper-button-next swiper-button-white"><img src="common/images/L_pre.png" id="L_pre" /></div>
+		        <!-- 如果需要分页器 -->
+    			<div class="swiper-pagination"></div>
+		</div>
+</div>
+<div id="pFooter"></div>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="common/js/publicContainer.js"></script>
+<script src="common/js/swiper-3.3.1.min.js"></script>
+<!--<script src="common/js/slide.js"></script>-->
+</html>
+   <!-- Initialize Swiper -->
+    <script>
+	var galleryTop = new Swiper('.gallery-top',{
+	    pagination: '.swiper-pagination',
+	    grabCursor: true,
+	    paginationClickable: true,
+	    mousewheelControl:true,//鼠标滚轮
+//	    loop:true,
+//	    autoplay:5000,
+	    mode: 'vertical',/*纵向滚动*/
+	   onInit: function(galleryTop){//Swiper初始化了
+        //console.log("提示Swiper的当前索引 "+mySwiper.activeIndex);//提示Swiper的当前索引
+        
+	    },
+	})
+	
+	$('.swiper-button-prev').on('click', function(e){/*向前*/
+	    e.preventDefault();
+	    galleryTop.slidePrev();
+		galleryTop.slideTo(galleryTop.activeIndex+6,2000,false);
+	})
+	
+	$('.swiper-button-next').on('click', function(e){/*向后*/
+	    e.preventDefault();
+	    galleryTop.slideNext();
+		galleryTop.slideTo(galleryTop.activeIndex-6,2000,false);
+	})
+	$('#L_pre_play').on('click', function(e){/*前一张*/
+		
+	    e.preventDefault();
+	    galleryTop.slidePrev();
+	})
+	
+	$('#L_next_play').on('click', function(e){/*后一张*/
+	    e.preventDefault();
+	    galleryTop.slideNext();
+	})
+	
+	$(function(){
+		$('#L_full_play').on('click',function(e){
+		$('.L_imgs').css('width','100%');
+		$('.L_slideImg li').css('width','100%');
+		$('.L_imgs').css('margin','0 auto');
+//		$('#L_slideImg').css('position','absolute');
+//		$('#L_slideImg').css('top','10px');
+//		$('#L_slideImg').css('left','10px');
+	})
+	})
+
+
+	
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        touchRatio: 0.2,
+        slideToClickedSlide: true
+    });
+	
+	//更改自动播放时间	
+    $("#L_downs").change(function(){
+			if($(this).children('option:selected').val()=='10秒'){
+					galleryTop.destroy(false);
+					var galleryTop2 = new Swiper('.gallery-top',{
+					    pagination: '.swiper-pagination',
+					    grabCursor: true,
+					    paginationClickable: true,
+					    mousewheelControl:true,//鼠标滚轮
+					    autoplay:2000,
+					    mode: 'vertical',/*纵向滚动*/
+					})
+					
+					//暂停
+					$('#L_stop_play').on('click',function(e){
+						if($('#L_stop_play').data('stop')=='1'){
+							$('#L_stop_play').attr('src','../src/common/images/L_stop_mouseDown.png')
+							e.preventDefault();
+						    galleryTop2.stopAutoplay();
+						    $('#L_stop_play').data("stop", 0);
+						}
+						else
+						{
+							$('#L_stop_play').attr('src','../src/common/images/L_stop_play.png')
+							e.preventDefault();
+						    galleryTop2.startAutoplay();
+						    $('#L_stop_play').data('stop',1);
+						}
+					})
+					
+					galleryTop2.params.control = galleryThumbs;
+    				galleryThumbs.params.control = galleryTop2;
+
+			}else if($(this).children('option:selected').val()=='20秒'){
+					galleryTop.destroy(false);
+					var galleryTop3 = new Swiper('.gallery-top',{
+					    pagination: '.swiper-pagination',
+					    grabCursor: true,
+					    paginationClickable: true,
+					    mousewheelControl:true,//鼠标滚轮
+					    autoplay:20000,
+					    mode: 'vertical',/*纵向滚动*/
+					})
+					
+					//暂停
+					$('#L_stop_play').on('click',function(e){
+						if($('#L_stop_play').data('stop')=='1'){
+							$('#L_stop_play').attr('src','../src/common/images/L_stop_mouseDown.png')
+							e.preventDefault();
+						    galleryTop3.stopAutoplay();
+						    $('#L_stop_play').data("stop", 0);
+						}
+						else
+						{
+							$('#L_stop_play').attr('src','../src/common/images/L_stop_play.png')
+							e.preventDefault();
+						    galleryTop3.startAutoplay();
+						    $('#L_stop_play').data('stop',1);
+						}
+					})
+					
+					galleryTop3.params.control = galleryThumbs;
+    				galleryThumbs.params.control = galleryTop3;
+			}else{
+					galleryTop.destroy(false);
+					var galleryTop4 = new Swiper('.gallery-top',{
+					    pagination: '.swiper-pagination',
+					    grabCursor: true,
+					    paginationClickable: true,
+					    mousewheelControl:true,//鼠标滚轮
+					    autoplay:5000,
+					    mode: 'vertical',/*纵向滚动*/
+					})
+					
+					//暂停
+					$('#L_stop_play').on('click',function(e){
+						if($('#L_stop_play').data('stop')=='1'){
+							$('#L_stop_play').attr('src','../src/common/images/L_stop_mouseDown.png')
+							e.preventDefault();
+						    galleryTop4.stopAutoplay();
+						    $('#L_stop_play').data("stop", 0);
+						}
+						else
+						{
+							$('#L_stop_play').attr('src','../src/common/images/L_stop_play.png')
+							e.preventDefault();
+						    galleryTop4.startAutoplay();
+						    $('#L_stop_play').data('stop',1);
+						}
+					})
+					
+					galleryTop4.params.control = galleryThumbs;
+    				galleryThumbs.params.control = galleryTop4;
+			}
+	});
+	
+    galleryTop.params.control = galleryThumbs;
+    galleryThumbs.params.control = galleryTop;
+    
+
+	//跳到上一组 图片更换
+	$('#L_next').hover(function(){
+		$('#L_next').attr('src','../src/common/images/L_next_mouseOver.png')
+	},function(){
+		$('#L_next').attr('src','../src/common/images/L_next.png')
+	});
+	//跳到下一组 图片更换
+	$('#L_pre').hover(function(){
+		$('#L_pre').attr('src','../src/common/images/L_pre_mouseOver.png')
+	},function(){
+		$('#L_pre').attr('src','../src/common/images/L_pre.png')
+	});
+	//上一张
+	$('#L_pre_play').hover(function(){
+		$('#L_pre_play').attr('src','../src/common/images/L_prePlay_mouseOver.png')
+	},function(){
+		$('#L_pre_play').attr('src','../src/common/images/L_pre_play.png')
+	});
+	//下一张
+	$('#L_next_play').hover(function(){
+		$('#L_next_play').attr('src','../src/common/images/L_nextPlay_mouseOver.png')
+	},function(){
+		$('#L_next_play').attr('src','../src/common/images/L_next_play.png')
+	});
+	
+    </script>

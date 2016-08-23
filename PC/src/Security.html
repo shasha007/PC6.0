@@ -1,0 +1,68 @@
+<!--
+Created by huqiwen on 16/7/15. 个人中心_账号安全
+describe : 
+-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <title>账号安全</title>
+</head>
+<body>
+<header id="GHead"></header>
+<div class="H_Person" style="background: #f2f6fa;">
+    <nav class="H_Person_Nav">
+        <span>基本信息</span>
+        <span class="H_On">账号安全</span>
+    </nav>
+    <div class="H_Security clearfix">
+        <div class="H_Security_L">
+            <p class="H_Security_Tit">修改密码</p>
+            <span>
+                <p>原始密码</p>
+                <input class="H_Security_Pwd1" type="password">
+            </span>
+            <span class="H_Security_Psd2">
+                <p>新密码</p>
+                <input class="H_Security_Pwd2" type="password">
+            </span>
+            <span class="H_Security_Psd3">
+                <p>确认密码</p>
+                <input class="H_Security_Pwd3" type="password">
+            </span>
+            <footer>
+                <button class="H_Security_Sub">
+                    提交
+                </button>
+            </footer>
+        </div>
+        <div class="H_Security_R">
+            <p class="H_Security_Tit">修改密码</p>
+            <span>
+                <p>绑定手机<span>尚未绑定手机</span></p>
+                <input class="H_Security_Tel" type="tel" >
+            </span>
+            <span>
+                <p>PU平台登录密码</p>
+                <p> <input class="H_Security_Pwd4" type="password">
+                    <button class="H_Security_GetCheck">获取验证码</button>
+                </p>
+            </span>
+            <span>
+                <p>验证码</p>
+                <p> <input class="H_Security_Check" type="text">
+                    <button class="H_Security_GetTel">验证绑定手机</button>
+                </p>
+            </span>
+        </div>
+    </div>
+</div>
+<footer id="pFooter"></footer>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/public.js"></script>
+</html>

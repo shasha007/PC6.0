@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="common/css/style.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>活动详情 现场照片</title>
+    <style>
+    	.L_detailPro{
+			width: 100%;
+			margin: 20px 0px;
+			padding-bottom: 20px;
+			font-size: 14px;
+			color: #C8CCD7;
+			border-bottom: 1px solid #DDDDDD;
+			overflow: hidden;
+		}
+		.L_detailPro div{
+			max-width: 1080px;
+			min-width: 960px;
+			margin: 0 auto;
+			text-align: left;
+		}
+		.L_detailPro a{
+			color: #000000;
+		}
+		.L_detailPro a:hover{
+			color: #ea5504;
+		}
+		
+		
+		
+		*{margin: 0;padding: 0;border: 0;}
+		ul,li{list-style: none;}
+		img{max-width: 100%;}
+		
+		.L_photo_content{
+			width: 997px;
+			height: 768px;
+			overflow: hidden;
+			margin: 0 auto;
+			position: relative;
+		}
+		.L_big_photo{
+			width: 100%;
+			height: 488px;
+			position: relative;
+		}
+		.L_slideImg{
+			width: auto;
+			height: 100%;
+			overflow: hidden;
+			position: absolute;
+			left: 0;
+			top:0;
+		}
+		.L_slideImg li{
+			width: 997px;
+			height: 100%;
+			float: left;
+			display: none;
+		}
+		.L_slideImg li:first-child{display: block;}
+		.L_slideImg img,.L_slideSmall li img{height: 100%;width: 100%;}
+		.L_slideSmall{
+			width: auto;
+			height: auto;
+			overflow: hidden;
+			position: absolute;
+			left: 100px;
+		}
+		.L_slideSmall li{
+			width: 100px;
+			height: 100px;
+			border: 2px solid transparent;
+			float: left;
+			margin-left: 10px;
+			margin-top: 30px;
+			cursor: pointer;
+		}
+		.L_slideSmall li{
+			opacity: 0;
+		}
+		.L_slideSmall li:nth-child(1),.L_slideSmall li:nth-child(2),.L_slideSmall li:nth-child(3),.L_slideSmall li:nth-child(4),.L_slideSmall li:nth-child(5),.L_slideSmall li:nth-child(6),.L_slideSmall li:nth-child(7){
+			opacity: 1;
+		}
+		.L_slideSmall li:first-child{margin-left: 0;}
+		.L_slideSmall li.L_sel{border: 3px solid orangered;}
+		.L_pre_photo{
+			float: left;
+			margin-top: 60px;
+		}
+		.L_next_photo{
+			float: right;
+			margin-top: 60px;
+		}
+		.L_play_photo{
+			margin: 40px 250px;
+		}
+		.L_play_photo img{
+			margin-left: 20px;
+		}
+		.L_play_photo select{
+			width: 100px;
+			height: 30px;
+			background-color: #F2F2F2;
+			border: none;
+			border-radius: 5px;
+			text-indent: 1em;
+			color: #85888F;
+		}
+		/*#L_pre:hover{
+			src: url(common/images/L_pre_mouseOver.png);
+		}*/
+		/*#L_next:hover{
+			src: url(common/images/L_next_mouseOver.png);
+		}*/
+    </style>
+</head>
+<body>
+<!--<div id="pHead2"></div>-->
+<header class="L_HuoHeader">
+	<!--<div>-->
+		<div class="L_header_info">
+			<div>
+			欢迎来到苏州大学文学院理学院苏州大学文学院理学院！
+			<button>切换大学</button>
+			</div>
+		</div>
+	    <div class="L_header_img">
+			<div>
+	        <img class="Logo" src="common/images/LOGO.png">
+	        <ul>
+	        	<li>活动</li>
+	        	<li>部落</li>
+	        	<li>申请学分</li>
+	        	<li>积分商城</li>
+	        </ul>
+	        <ul class="L_header_R">
+				<li>
+					<img src="common/images/touxiang.png"/>
+				</li>
+				<li>
+					<img src="common/images/message.png" />
+				</li>
+				<li>
+					<img src="common/images/search.png" />
+				</li>
+
+			</ul>
+	    </div>
+	</div>
+
+</header>
+
+<div class="L_detailPro">
+	<div>
+		您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">2016黑白键钢琴系列?菁英 法国钢琴家海米?帕诺希安独音乐会 </a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">晒现场</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">现场照片</a></span>
+	</div>
+</div>
+<div class="L_detail_photo">
+	
+		<div class="L_photo_content">
+			<div class="L_play_photo">
+				<img src="common/images/L_fullscript.png" onclick=""/>
+						    <!--下拉按钮-->
+				<select id="L_downs">
+					<option>5秒</option>
+					<option>10秒</option>
+					<option>20秒</option>
+				</select>
+				<!--<img src="common/images/L_down.png" id="L_downs"/>-->
+				<img src="common/images/L_pre_play.png"  id="L_pre_play"/>
+				<img src="common/images/L_stop_play.png" id="L_stop_play"/>
+				<img src="common/images/L_next_play.png" id="L_next_play"/>
+				<img src="common/images/L_detail.png" id="L_detail"/>
+			</div>
+			<div class="L_big_photo">
+				<ul class="L_slideImg" id="L_slideImg">
+					<li><img src="common/images/L_phtoDetail01.jpg"></li>
+					<li><img src="common/images/L_phtoDetail02.png"></li>
+					<li><img src="common/images/L_phtoDetail03.png"></li>
+					<li><img src="common/images/L_phtoDetail04.png"></li>
+					<li><img src="common/images/L_phtoDetail05.png"></li>
+					<li><img src="common/images/L_phtoDetail04.png"></li>
+					<li><img src="common/images/L_phtoDetail05.png"></li>
+					<li><img src="common/images/0011.jpg"></li>
+					<li><img src="common/images/H_Active_Pic1.png"></li>
+					<li><img src="common/images/H_active_Tit.png"></li>
+					<li><img src="common/images/h_alnum1.png"></li>
+					<li><img src="common/images/h_alnum2.png"></li>
+					<li><img src="common/images/H_Person_StudentId.png"></li>
+					<li><img src="common/images/h_alnum3.png"></li>
+				</ul>
+			</div>
+			<!--缩略图-->
+			<div class="L_small_photo">
+				<div class="L_pre_photo" >
+					<img src="common/images/L_pre.png" id="L_pre" />
+				</div>
+				<ul class="L_slideSmall" id="L_slideSmall">
+					<li class="L_sel"><img src="common/images/L_phtoDetail01.jpg"></li>
+					<li><img src="common/images/L_phtoDetail02.png"></li>
+					<li><img src="common/images/L_phtoDetail03.png"></li>
+					<li><img src="common/images/L_phtoDetail04.png"></li>
+					<li><img src="common/images/L_phtoDetail05.png"></li>
+					<li><img src="common/images/L_phtoDetail04.png"></li>
+					<li><img src="common/images/L_phtoDetail05.png"></li>
+					<li><img src="common/images/0011.jpg"></li>
+					<li><img src="common/images/H_Active_Pic1.png"></li>
+					<li><img src="common/images/H_active_Tit.png"></li>
+					<li><img src="common/images/h_alnum1.png"></li>
+					<li><img src="common/images/h_alnum2.png"></li>
+					<li><img src="common/images/H_Person_StudentId.png"></li>
+					<li><img src="common/images/h_alnum3.png"></li>
+				</ul>
+				<div class="L_next_photo">
+					<img src="common/images/L_next.png" id="L_next"/>
+				</div>
+			</div>
+
+		</div>
+	
+</div>
+<!--<div id="pFooter"></div>-->
+<footer class="h_PublicFooter">
+    <div>
+    <div class="h_PuFo_InFo">
+        <p class="h_PuFo_Info">
+            <a>关于PU</a>
+            <a>使用帮助</a>
+            <a>联系我们</a>
+            <a>客服中心</a>
+        </p>
+        <p>
+            <span>
+                PocketUni版权所有 苏ICP备12046592号-2<img class="h_PuFo_trust" src="common/images/PublicFoot_img.png">
+            </span>
+        </p>
+    </div>
+    <div class="h_PuFo_Img">
+        <div>
+            <img src="common/images/u74.jpg">
+            <p>APP下载</p>
+        </div>
+        <div>
+            <img src="common/images/u76.jpg">
+            <p>微信公众号</p>
+        </div>
+    </div>
+
+    </div>
+</footer>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/publicContainer.js"></script>
+<script src="common/js/slide.js" ></script>
+</html>

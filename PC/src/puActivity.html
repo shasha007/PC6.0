@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发布活动 PU</title>
+		<link rel="stylesheet" href="common/css/style.css" />
+		<link rel="stylesheet" href="common/css/reset.min.css" />
+		<link rel="stylesheet" href="common/css/jquery.datetimepicker.css" />
+	</head>
+	<body bgcolor="#f7f7f7">
+		<!--公用头部-->
+		<!--<div id="pHead2"></div>-->
+		<header class="L_HuoHeader">
+			<!--<div>-->
+				<div class="L_header_info">
+					<div>
+					欢迎来到苏州大学文学院理学院苏州大学文学院理学院！
+					<button>切换大学</button>
+					</div>
+				</div>
+			    <div class="L_header_img">
+					<div>
+			        <img class="Logo" src="common/images/LOGO.png">
+			        <ul>
+			        	<li>活动</li>
+			        	<li>部落</li>
+			        	<li>申请学分</li>
+			        	<li>积分商城</li>
+			        </ul>
+			        <ul class="L_header_R">
+						<li>
+							<img src="common/images/touxiang.png"/>
+						</li>
+						<li>
+							<img src="common/images/message.png" />
+						</li>
+						<li>
+							<img src="common/images/search.png" />
+						</li>
+		
+					</ul>
+			    </div>
+			</div>
+		
+		</header>
+		<div class="L_huomulu">
+			您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;活动&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span>发布活动</span>
+		</div>
+		<div class="L_huotype">
+			<div>
+				<img src="common/images/type.png" />&nbsp;&nbsp;&nbsp;类型
+			</div>
+			<ul class="L_huoitems">
+				<li class="L_one_second">
+					<span>PU活动</span>
+				</li>
+				<li>
+					<span>全省活动</span>
+				</li>
+				<li>
+					<span>本校活动</span>
+				</li>
+			</ul>
+		</div>
+		<div class="L_huodetails">
+			<div class="L_huotitle">
+				<img src="common/images/type.png" />&nbsp;&nbsp;&nbsp;基本信息
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>名称</p>
+					<p><input type="text" placeholder="请输入活动名称，1——30字符" /></p>
+				</div>
+				<div>
+					<p><span>*</span>地点</p>
+					<p><input type="text" placeholder="请输入活动地点" /></p>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>开始时间<span style="color:#DDDDDD ;">&nbsp;&nbsp;填写时默认活动发起即开始</span></p>
+					<p><input type="text" name="datetime"  class="L_time_detail"  /></p>
+				</div>
+				<div>
+					<p><span>*</span>结束时间</p>
+					<p><input type="text" name="datetime"  class="L_time_detail"  /></p>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>显示学校</p>
+					<div class="L_detail_school">
+						<!--<div class="L_select_add">-->
+						<select id="L_province_select_v" name="BigCate" onChange="changeProv(this)" >
+	            				<option value="0" >-全国-</option>
+	            				<option value="1" >江苏</option>
+	            				<option value="2" >青海</option>
+	            				<option value="3" >安徽</option>
+	            				<option value="4" >海南</option>
+	            				<option value="5" >湖北</option>
+						</select>
+	        			<select id="L_city_select_v" name="SmlCate" onChange="getSchools(this)">
+	            				<option value="0" >-全省-</option>
+	                    </select>
+
+						<div class="L_addN">
+							<a href="javascript:void(0);" onclick="addArea();" class="L_add_school" style="color:  #3a9fdf;">+增加投放地区</a>
+						</div>
+						<div class="L_selected_school_v" id="L_selected_school_v" >
+						</div>
+					</div>
+				
+
+				</div>
+			</div>
+			<!--add-->
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>显示年级</p>
+					<ul class="L_huoGrade">
+						<li>
+							<input type="checkbox" name="L_allchecked" id="L_allchecked" style="width:18px;height: 18px; " onclick="DoCheck()"/><span>全部</span>
+						</li>
+						<li>
+							<input type="checkbox" name="L_grade" style="width:18px;height: 18px; "/><span>2010</span>
+						</li>
+						<li>
+							<input type="checkbox" name="L_grade" style="width:18px;height: 18px; "/><span>2011</span>
+						</li>
+						<li>
+							<input type="checkbox" name="L_grade" style="width:18px;height: 18px; "/><span>2012</span>
+						</li>
+						<li>
+							<input type="checkbox" name="L_grade" style="width:18px;height: 18px; "/><span>2014</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p>活动人数</p>
+					<p><input type="text" placeholder="活动人数上线，填整数或无限制" /></p>
+				</div>
+				<div>
+					<p>联系方式</p>
+					<p><input type="text" placeholder="如：张小姐 1505045XXXX" /></p>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p>活动选项</p>
+					<ul class="L_huoPeaple">
+						<li data-checked="false">
+							<div><img src="common/images/gou.png"></div><span>报名活动需要审批</span>
+						</li>
+						<li data-checked="true">
+							<div><img src="common/images/gou.png"></div><span>报名活动需要填写联系电话</span>
+						</li>
+						<li data-checked="true">
+							<div><img src="common/images/gou.png"></div><span>不报名也可签到</span>
+						</li>
+						<li data-checked="true">
+							<div><img src="common/images/gou.png"></div><span>打开签退功能</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p>定时上线<span style="color:#CCCCCC;font-size: 13px;margin-left: 10px;">打开定时上线功能填写时间</span></p>
+					<div class="L_huo_time"><input type="radio" name="L_up_time" id="L_close_radio" style="width: 18px;height:18px;" /><span>关</span><input type="radio" name="L_up_time" id="L_open_radio" style="width: 18px;height:18px;margin-left: 60px;"/><span>开</span><input type="text" class="L_time_detail" style="margin-left: 20px;display: none;" /></div>
+				</div>
+			</div>
+			<div class="L_voter_conf">
+				<div>
+					<p class="L_voter_function">投票功能<input type="checkbox" id="L_function_open" name="L_function_open" style="width: 18px;height: 18px;margin-left: 20px;margin-top: 10px;line-height: 40px;"/><span style="line-height: 40px;height: 40px;">打开</span></p>
+					<div class="L_config_all">
+						<div class="L_voter_detail">
+				            <div style="font-size: 16px;color: #CCCCCC;padding: 20px;">自定义选手上传资料时，输入框的名称（ 以下为必填项 ）</div>
+				            <div class="L_thead_Li">
+							   <span style="color: #3e3e3e;">输入框名称</span>
+							   <span>说明</span>
+							   <span>是否在前台显示</span>
+							   <span>是否必填</span>
+							   <span>操作</span>
+							</div>
+							<div class="L_must_comment">
+								以下为必填项
+							</div>
+				          	<div class="L_tbody_th L_config_name">
+				          		<span><input type="text" placeholder="选手名称"/></span>
+				          		<span>默认：选手名称</span>
+				          		<!--<span><input type="checkbox" id="L_show" checked="true" disabled="true"/></span>
+				          		<span><input type="checkbox" id="L_must" checked="true" disabled="true"/></span>-->
+				          	</div>
+				          	<div class="L_tbody_th L_config_school">
+				          		<span><input type="text" placeholder="选手院校"/></span>
+				          		<span>默认：选手院校</span>
+				          		<!--<span><input type="checkbox" id="L_show" checked="true" disabled="true"/></span>
+				          		<span><input type="checkbox" id="L_must" checked="true" disabled="true"/></span>-->
+				          	</div>
+				          	<div class="L_tbody_th L_config_view">
+				          		<span>简介</span>
+				          		<span>默认：简介</span>
+				          		<!--<span><input type="checkbox" id="L_show" checked="true" disabled="true"/></span>
+				          		<span><input type="checkbox" id="L_must" checked="true" disabled="true"/></span>-->
+				          	</div>
+				          	<div class="L_tbody_th L_config_head">
+				          		<span>头像+展示图片</span>
+				          		<span>默认：头像+展示图片</span>
+				          		<!--<span><input type="checkbox" id="L_show" checked="true" disabled="true"/></span>
+				          		<span><input type="checkbox" id="L_must" checked="true" disabled="true"/></span>-->
+				          	</div>
+				          	<div class="L_notmust_comment">
+								以下为可选项：<span>250字以内，无格式，文本：大于250字，有格式</span>
+							</div>
+				          	<div class="L_tbody_footer">
+								<a href="javascript:void(0);" id="addConfig" style="color: #3EA1E5;">+添加新字段</a>
+				          	</div>
+			            </div>
+			            
+			            <div class="L_voter_setting">
+				            <p style="font-size: 14px;border-bottom: 1px solid #DDDDDD;">投票设定</p>
+				            
+				            <p><i>投票必须先签到</i><input type="radio" name="L_sign"/><span>是</span><input type="radio" name="L_sign"/><span>否</span></p>
+				            <p><i>可否重复投票</i><input type="radio" name="L_voter_again"/><span>可重复</span><input type="radio" name="L_voter_again"/><span>不可重复</span></p>
+				            <p><i>可投票年级</i><input type="checkbox" name="L_allchecked_N" id="L_allchecked" style="width:18px;height: 18px; " onclick="GradeCheck()"/><span>全部</span>
+										<input type="checkbox" name="L_grade_N" style="width:18px;height: 18px; "/><span>2010</span>
+										<input type="checkbox" name="L_grade_N" style="width:18px;height: 18px; "/><span>2011</span>
+										<input type="checkbox" name="L_grade_N" style="width:18px;height: 18px; "/><span>2012</span>
+										<input type="checkbox" name="L_grade_N" style="width:18px;height: 18px; "/><span>2014</span>
+				            <p><i>每人每日最多投票数</i><input type="text"/>&nbsp;&nbsp;<span>票</span></p>
+				            <p><i>所有票必须完</i><input type="radio" name="L_all_voter"/><span>是</span><input type="radio" name="L_all_voter"/><span>否</span></p>
+				            <p><i>每日可投票</i><input type="radio" name="L_day_voter"/><span>是</span><input type="radio" name="L_day_voter"/><span>否</span></p>
+				            <p><i>选手排序规则</i><input type="radio" name="L_voter_rule"/><span>按票数由高到低排序</span><input type="radio" name="L_voter_rule"/><span>随机排序</span></p>
+				            <p><i>投票开关</i><input type="radio" name="L_openclose"/><span>打开</span><input type="radio" name="L_openclose"/><span>关闭</span></p>
+			            </div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="L_huomessage L_huoapply">
+				<div>
+					<p><span>*</span>活动类型</p>
+					<p>
+						<select>
+							<option selected="selected">请选择活动类型</option>
+							<option>活动A</option>
+						</select>
+					</p>
+				</div>
+				
+			</div>
+			<div class="L_huomessage L_huoPhoto">
+				<div>
+					<p><span>*</span>活动图标</p>
+					<ul>
+						<li>
+							<img src="common/images/u65.png" class="wk_icon" id="icon">
+							<p>选择照片</p>
+							<input type="file" id="file" onchange="UploadImg()"/>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+
+		</div>
+		<div class="L_huodetails2">
+			<div class="L_huotitle">
+				<img src="common/images/type.png" />&nbsp;&nbsp;&nbsp;报名信息
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>报名开始时间<span style="color:#DDDDDD ;">&nbsp;&nbsp;填写时默认活动发起即开始</span></p>
+					<p><input type="text" placeholder="报名开始时间" /></p>
+				</div>
+				<div>
+					<p><span>*</span>报名结束时间</p>
+					<p><input type="text" placeholder="报名结束时间" /></p>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p>报名费用</p>
+					<div class="L_huoMoney">
+						<!--<li data-checked="false">
+							<div><img src="common/images/gou.png"></div><span>免费</span>
+						</li>
+						<li data-checked="true">
+							<div><img src="common/images/gou.png"></div><span>收费</span>&nbsp;&nbsp;&nbsp;<input type="text" style="line-height: 20px;" />元
+						</li>-->
+						<input type="text" style="line-height: 20px;width: 120px;" />&nbsp;&nbsp;
+						<span>收费说明</span>&nbsp;&nbsp;&nbsp;<input type="text" style="line-height: 20px;" />
+					</div>
+				</div>
+			</div>
+			<div class="L_huomessage">
+				<div>
+					<p><span>*</span>活动签名</p>
+					<div id="L_textarea" rows="1" style="width: 760px;height:45px;margin-top: 10px;resize: none;border: 1px solid #DDDDDD;border-radius: 5px;text-indent: 2em;line-height: 40px;"></div>
+					<p id="L_sign">
+	                   <span class="L_On" id="L_On">123</span>
+	                   <span>演唱会</span>
+	                   <span>123</span>
+	                   <span>演唱会</span>
+               		</p>
+				</div>
+			</div>
+		</div>
+		<!--add-->
+		<div class="L_huodetails2">
+			<div class="L_huotitle">
+				<img src="common/images/type.png" />&nbsp;&nbsp;&nbsp;活动介绍
+			</div>
+			<div class="L_huomessage_tinymce">
+				<textarea>Your content here.</textarea>
+			</div>
+			<!--<div class="L_huomessage">
+				<div>
+					<p><span>*</span>活动签名</p>
+					<div id="L_textarea" rows="1" style="width: 760px;height:45px;margin-top: 10px;resize: none;border: 1px solid #DDDDDD;border-radius: 5px;text-indent: 2em;line-height: 40px;"></div>
+					<p id="L_sign">
+	                   <span class="L_On" id="L_On">123</span>
+	                   <span>演唱会</span>
+	                   <span>123</span>
+	                   <span>演唱会</span>
+               		</p>
+				</div>
+			</div>-->
+		</div>
+		<!--公用底部-->
+		<!--<div id="pFooter"></div>-->
+		<footer class="h_PublicFooter">
+		    <div>
+		    <div class="h_PuFo_InFo">
+		        <p class="h_PuFo_Info">
+		            <a>关于PU</a>
+		            <a>使用帮助</a>
+		            <a>联系我们</a>
+		            <a>客服中心</a>
+		        </p>
+		        <p>
+		            <span>
+		                PocketUni版权所有 苏ICP备12046592号-2<img class="h_PuFo_trust" src="common/images/PublicFoot_img.png">
+		            </span>
+		        </p>
+		    </div>
+		    <div class="h_PuFo_Img">
+		        <div>
+		            <img src="common/images/u74.jpg">
+		            <p>APP下载</p>
+		        </div>
+		        <div>
+		            <img src="common/images/u76.jpg">
+		            <p>微信公众号</p>
+		        </div>
+		    </div>
+		
+		    </div>
+		</footer>
+	</body>
+</html>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.datetimepicker.js"></script>
+<script src="bower_components/jquery/dist/jquery.tinymce.min.js"></script>
+<script src="bower_components/jquery/dist/tinymce.min.js"></script>
+<script src="common/js/publicContainer.js"></script>
+<script src="common/js/releaseA.js"></script>
+<script src="common/js/addVoterm.js"></script>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../common/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../common/css/admin.css" />
+		<script src="../common/js/jquery-1.12.1.min.js"></script>
+		<script src="../common/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="customContainer">
+			<!--菜单-->
+			<div class="menu">
+				<ul>
+					<li class="menuItem">
+						 <p class="add"><span class="glyphicon glyphicon-home"></span>首页</p>
+						 <ul>
+						 	<li>item1</li>
+						 	<li>item2</li>
+						 	<li>item3</li>
+						 	<li>item4</li>
+						 	<li>item5</li>
+						 </ul>
+					</li>
+					<li class="menuItem">
+						 <p  class="add"><span class="glyphicon glyphicon-copyright-mark"></span>列表</p>
+						 <ul>
+						 	<li>item1</li>
+						 	<li>item2</li>
+						 	<li>item3</li>
+						 	<li>item4</li>
+						 	<li>item5</li>
+						 </ul>
+					</li>
+					<li class="menuItem">
+						 <p  class="add"><span class="glyphicon glyphicon-folder-close"></span>管理</p>
+						 <ul>
+						 	<li>item1</li>
+						 	<li>item2</li>
+						 	<li>item3</li>
+						 </ul>
+					</li>
+					<li class="menuItem">
+						 <div><span class="glyphicon glyphicon-user"></span>登录</div>
+					</li>
+				</ul>
+			</div>
+			
+			<!--右侧容器-->
+			<div class="mainContent">
+				<div class="head_section">
+					<div class="input-group">
+				        <input type="text" class="form-control" placeholder="Search here...">
+				    </div>
+					<div class="btn-group">
+						<div class="dropdown-toggle head_info" data-toggle="dropdown">
+							<img src="../common/images/Footer_two.png">Allen Iversion
+						</div>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">功能</a></li>
+							<li><a href="#">另一个功能</a></li>
+							<li><a href="#">其他</a></li>
+						</ul>
+					</div>
+					<div class="btn-group btn_op1">
+						<div class="dropdown-toggle head_info" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-align-justify"></span>
+							<span class="badge">50</span>
+						</div>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">功能</a></li>
+							<li><a href="#">另一个功能</a></li>
+							<li><a href="#">其他</a></li>
+						</ul>
+					</div>
+					<div class="btn-group btn_op2">
+						<div class="dropdown-toggle head_info" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-align-justify"></span>
+						</div>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">功能</a></li>
+							<li><a href="#">另一个功能</a></li>
+							<li><a href="#">其他</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="mainContent_area">
+					<div>
+						<h4>表单</h4>
+						<form role="form">
+						   <div class="form-group">
+						      <label for="name">名称</label>
+						      <input type="text" class="form-control" id="name" 
+						         placeholder="请输入名称">
+						   </div>
+						   <div class="form-group">
+						      <label for="inputfile">文件输入</label>
+						      <input type="file" id="inputfile">
+						   </div>
+						   <div class="checkbox">
+						      <label>
+						      <input type="checkbox"> 请打勾
+						      </label>
+						   </div>
+						   <button type="submit" class="btn btn-default">提交</button>
+						</form>
+					</div>
+					<div>
+						<h4>下拉菜单</h4>
+						<div class="dropdown">
+						   <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
+						      data-toggle="dropdown">
+						      主题
+						      <span class="caret"></span>
+						   </button>
+						   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						      <li role="presentation">
+						         <a role="menuitem" tabindex="-1" href="#">Java</a>
+						      </li>
+						      <li role="presentation">
+						         <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+						      </li>
+						      <li role="presentation">
+						         <a role="menuitem" tabindex="-1" href="#">
+						            数据通信/网络
+						         </a>
+						      </li>
+						      <li role="presentation" class="divider"></li>
+						      <li role="presentation">
+						         <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+						      </li>
+						   </ul>
+						</div>
+					</div>
+					<div>
+						<h4>按钮</h4>
+						<!-- 标准的按钮 -->
+						<button type="button" class="btn btn-default">默认按钮</button>
+						
+						<!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+						<button type="button" class="btn btn-primary">原始按钮</button>
+						
+						<!-- 表示一个成功的或积极的动作 -->
+						<button type="button" class="btn btn-success">成功按钮</button>
+						
+						<!-- 信息警告消息的上下文按钮 -->
+						<button type="button" class="btn btn-info">信息按钮</button>
+						
+						<!-- 表示应谨慎采取的动作 -->
+						<button type="button" class="btn btn-warning">警告按钮</button>
+						
+						<!-- 表示一个危险的或潜在的负面动作 -->
+						<button type="button" class="btn btn-danger">危险按钮</button>
+						
+						<!-- 并不强调是一个按钮，看起来像一个链接，但同时保持按钮的行为 -->
+						<button type="button" class="btn btn-link">链接按钮</button>
+					</div>
+					<div>
+						<h4>输入框</h4>
+						<div class="input-group">
+					         <span class="input-group-addon">@</span>
+					         <input type="text" class="form-control" placeholder="twitterhandle">
+					      </div>
+					      <br>
+					
+					      <div class="input-group">
+					         <input type="text" class="form-control">
+					         <span class="input-group-addon">.00</span>
+					      </div>
+					      <br>
+					      <div class="input-group">
+					         <span class="input-group-addon">$</span>
+					         <input type="text" class="form-control">
+					         <span class="input-group-addon">.00</span>
+					      </div>
+					</div>
+					<div>
+						<h4>分页</h4>
+						<ul class="pagination">
+						  <li><a href="#">&laquo;</a></li>
+						  <li class="active"><a href="#">1</a></li>
+						  <li class="disabled"><a href="#">2</a></li>
+						  <li><a href="#">3</a></li>
+						  <li><a href="#">4</a></li>
+						  <li><a href="#">5</a></li>
+						  <li><a href="#">&raquo;</a></li>
+						</ul><br>
+						<ul class="pagination pagination-lg">
+						  <li><a href="#">&laquo;</a></li>
+						  <li><a href="#">1</a></li>
+						  <li><a href="#">2</a></li>
+						  <li><a href="#">3</a></li>
+						  <li><a href="#">4</a></li>
+						  <li><a href="#">5</a></li>
+						  <li><a href="#">&raquo;</a></li>
+						</ul><br>
+						<ul class="pagination">
+						  <li><a href="#">&laquo;</a></li>
+						  <li><a href="#">1</a></li>
+						  <li><a href="#">2</a></li>
+						  <li><a href="#">3</a></li>
+						  <li><a href="#">4</a></li>
+						  <li><a href="#">5</a></li>
+						  <li><a href="#">&raquo;</a></li>
+						</ul><br>
+						<ul class="pagination pagination-sm">
+						 <li><a href="#">&laquo;</a></li>
+						  <li><a href="#">1</a></li>
+						  <li><a href="#">2</a></li>
+						  <li><a href="#">3</a></li>
+						  <li><a href="#">4</a></li>
+						  <li><a href="#">5</a></li>
+						  <li><a href="#">&raquo;</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>进度条</h4>
+						<div class="progress">
+						   <div class="progress-bar progress-bar-success" role="progressbar" 
+						      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 	
+						      style="width: 90%;">
+						      <span class="sr-only">90% 完成（成功）</span>
+						   </div>
+						</div>
+						<div class="progress">
+						   <div class="progress-bar progress-bar-info" role="progressbar" 
+						      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 	
+						      style="width: 30%;">
+						      <span class="sr-only">30% 完成（信息）</span>
+						   </div>
+						</div>
+						<div class="progress">
+						   <div class="progress-bar progress-bar-warning" role="progressbar" 
+						      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 
+						      style="width: 20%;">
+						      <span class="sr-only">20% 完成（警告）</span>
+						   </div>
+						</div>
+						<div class="progress">
+						   <div class="progress-bar progress-bar-danger" role="progressbar" 
+						      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 	
+						      style="width: 10%;">
+						      <span class="sr-only">10% 完成（危险）</span>
+						   </div>
+						</div>
+					</div>
+					<div>
+						<h4>表格</h4>
+						<table class="table table-bordered">
+						   <caption>边框表格布局</caption>
+						   <thead>
+						      <tr>
+						         <th>名称</th>
+						         <th>城市</th>
+						         <th>密码</th>
+						      </tr>
+						   </thead>
+						   <tbody>
+						      <tr>
+						         <td>Tanmay</td>
+						         <td>Bangalore</td>
+						         <td>560001</td>
+						      </tr>
+						      <tr>
+						         <td>Sachin</td>
+						         <td>Mumbai</td>
+						         <td>400003</td>
+						      </tr>
+						      <tr>
+						         <td>Uma</td>
+						         <td>Pune</td>
+						         <td>411027</td>
+						      </tr>
+						   </tbody>
+						</table>
+					</div>
+					<div>
+						<h4>图片</h4>
+						<img src="../common/images/0011.jpg"
+						   class="img-rounded">
+						<img src="../common/images/0011.jpg" 
+						   class="img-circle">
+						<img src="../common/images/0011.jpg"
+						   class="img-thumbnail">
+					</div>
+					<div>
+						<h4>弹出框</h4>
+						<div class="container" style="padding: 100px 50px 10px;" >
+						   <button type="button" class="btn btn-default" title="Popover title"  
+						      data-container="body" data-toggle="popover" data-placement="left" 
+						      data-content="左侧的 Popover 中的一些内容">
+						      左侧的 Popover
+						   </button>
+						   <button type="button" class="btn btn-primary" title="Popover title"  
+						      data-container="body" data-toggle="popover" data-placement="top" 
+						      data-content="顶部的 Popover 中的一些内容">
+						      顶部的 Popover
+						   </button>
+						   <button type="button" class="btn btn-success" title="Popover title"  
+						      data-container="body" data-toggle="popover" data-placement="bottom" 
+						      data-content="底部的 Popover 中的一些内容">
+						      底部的 Popover
+						   </button>
+						   <button type="button" class="btn btn-warning" title="Popover title"  
+						      data-container="body" data-toggle="popover" data-placement="right" 
+						      data-content="右侧的 Popover 中的一些内容">
+						      右侧的 Popover
+						   </button>
+						</div>
+						
+						   <script>$(function () 
+						      { $("[data-toggle='popover']").popover();
+						      });
+						   </script>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../common/js/admin.js"></script>
+</html>

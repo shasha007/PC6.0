@@ -1,0 +1,81 @@
+<!--
+Created by huqiwen on 16/7/18. 申请学分表单填写
+describe : 
+-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <title>表单填写</title>
+</head>
+<body>
+<header id="GHead"></header>
+<img src="common/images/H_Credit_header.png" class="H_Credit_Banner">
+<button class="H_Credit_Btn">我的申请</button>
+<div id="H_Credit">
+<table class="H_CreditFill">
+    <tr>
+        <td><span class="red">*</span>姓名</td>
+        <td><input type="text" placeholder="23字以内,显示于第二课堂成绩单"></td>
+    </tr>
+    <tr>
+        <td><span class="red">*</span>实践或获奖时间</td>
+        <td><input type="date"></td>
+    </tr>
+    <tr>
+        <td><span class="red">*</span>个人表彰</td>
+        <td>
+            <input type="checkbox">三好学生
+            <input type="checkbox">优秀团员
+        </td>
+    </tr>
+    <tr>
+        <td><span class="red">*</span>相关文件</td>
+        <td>
+           <em id="filename"></em>
+            <span>
+                <p class="H_CF_Add"> 添加图片<input type="file" onchange="uploadFile()" id="file"></p>
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td><span class="red">*</span>审核人</td>
+        <td> <!--下拉按钮-->
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">
+                    部门 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">功能</a></li>
+                    <li><a href="#">另一个功能</a></li>
+                </ul>
+            </div>
+            <!--下拉按钮-->
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">
+                    部门 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">功能</a></li>
+                    <li><a href="#">另一个功能</a></li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+    <footer class="H_CF_Sub">
+        <button>提交申请</button>
+    </footer>
+</div>
+<footer id="pFooter"></footer>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/publicContainer.js"></script>
+<script src="common/js/public.js"></script>
+</html>

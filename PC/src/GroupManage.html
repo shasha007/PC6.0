@@ -1,0 +1,146 @@
+<!--
+Created by huqiwen on 16/7/14. 部落管理
+describe : 
+-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <link href="common/css/share.css" rel="stylesheet">
+    <title>部落管理</title>
+</head>
+<body style="background: #f2f6fa">
+<div id="GHead"></div>
+<div class="H_GManage_Con clearfix">
+    <!--管理 左侧菜单-->
+    <!--左右侧高度需要用publicManage.js来同一高度-->
+    <div class="H_GManage_Nav">
+        <ul>
+            <li class="H_on" data-ManageType="1">
+                <img src="common/images/H_GM_Nav1.png"> &emsp13;基本信息
+            </li>
+            <li data-ManageType="2">
+                <img src="common/images/H_GM_Nav2.png"> &emsp13;成员管理
+            </li>
+            <li data-ManageType="3">
+                <img src="common/images/H_GM_Nav3.png"> &emsp13;相册管理
+            </li>
+            <li data-ManageType="7">
+                <img src="common/images/H_GM_Nav3.png"> &emsp13;公告管理
+            </li>
+            <li data-ManageType="4">
+                <img src="common/images/H_GM_Nav4.png"> &emsp13;下载申请表格
+            </li>
+            <li data-ManageType="5">
+                <img src="common/images/H_GM_Nav5.png"> &emsp13;上传表格
+            </li>
+            <li data-ManageType="6">
+                <img src="common/images/H_GM_Nav6.png"> &emsp13;活动管理
+            </li>
+        </ul>
+    </div>
+    <!--管理 右侧内容-->
+    <div class="H_GManage_Set">
+        <ol class="breadcrumb">
+            <li>您的位置</li>
+            <li><a href="#">社团</a></li>
+            <li class="active">口袋大学经济与技术管理学院学生会</li>
+        </ol>
+        <div id="socialShare">
+            <a class="msb_main">
+                <img title="分享" src="common/images/share_core_square.jpg">
+            </a>
+        </div>
+        <!--右侧头部+分享 切换时不需要变动-->
+        <header>
+
+        </header>
+        <div class="H_GM_GInfo clearfix">
+            <div>
+                <img src="common/images/H_GM_Pic1.png">
+            </div>
+            <div class="H_GM_SetInfo">
+                <p>口袋大学经济与技术管理学院学生会</p>
+                <!--评分 1—-满星 2--半星 3--空星 -->
+                <p>
+                    <img src="common/images/H_star_1.png">
+                    <img src="common/images/H_star_1.png">
+                    <img src="common/images/H_star_1.png">
+                    <img src="common/images/H_star_2.png">
+                    <img src="common/images/H_star_3.png">
+                </p>
+                <p>院系：<span>经济管理学院</span></p>
+                <p>活力值：<span>20</span></p>
+                <p>部落主席：<span>莱迪嘎嘎</span></p>
+                <p>创建时间：<span>2016-10-14</span></p>
+            </div>
+            <div>
+                <img src="common/images/H_GM_Set2.png">
+            </div>
+        </div>
+        <!--Sawp内包含可以被替换的内容 -->
+        <div class="H_GManage_Swap">
+            <!--主体内容-->
+            <!--<div class="H_GM_SetCon clearfix">-->
+            <!--<ul>-->
+               <!--<li class="H_GMSet_Introduce">-->
+                   <!--<div>*简介:</div>-->
+                   <!--<div><textarea></textarea></div>-->
+               <!--</li>-->
+                <!--<li class="H_GMSet_Logo">-->
+                    <!--<div>LOGO:</div>-->
+                    <!--<div>-->
+                        <!--<img  id="icon" src="common/images/H_MG_LOGO.png">-->
+                        <!--<span>-->
+                         <!--<p>尺寸为180*180，支持格式jpg,jpeg,png,gif。用于部落头像图片）<br></p>-->
+                         <!--<p class="H_GMSet_AddImg"> 添加图片<input type="file" onchange="UploadImg()" id="file"> </p>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="H_GMSet_Contact">-->
+                    <!--<div>联系人:</div>-->
+                    <!--<div><input type="text"></div>-->
+                <!--</li>-->
+                <!--<li class="H_GMSet_Phone">-->
+                    <!--<div>联系电话:</div>-->
+                    <!--<div><input type="tel"></div>-->
+                <!--</li>-->
+                <!--<li class="H_GMSet_Mail">-->
+                    <!--<div>E-mail:</div>-->
+                    <!--<div><input type="email"></div>-->
+                <!--</li>-->
+                <!--<li class="H_GMSet_Number">-->
+                    <!--<div>成员数:</div>-->
+                    <!--<div><input type="text" disabled value="11"></div>-->
+                <!--</li>-->
+                <!--<li class="H_GMSet_Save">-->
+                    <!--<div></div>-->
+                    <!--<div>-->
+                        <!--<button>保存</button>-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        </div>
+    </div>
+</div>
+<!--编辑照片信息-->
+<div class="modal fade" id="AlbumCreate">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+    $(".H_GManage_Swap").load("GroupSet.html");
+</script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/publicManage.js"></script>
+<script src="common/js/share.js"></script>
+<script src="common/js/GroupManage.js"></script>
+</html>

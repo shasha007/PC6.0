@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <title>人气排行</title>
+</head>
+<body>
+<!--<div id="pHead2"></div>-->
+<header class="L_HuoHeader">
+	<!--<div>-->
+		<div class="L_header_info">
+			<div>
+			欢迎来到苏州大学文学院理学院苏州大学文学院理学院！
+			<button>切换大学</button>
+			</div>
+		</div>
+	    <div class="L_header_img">
+			<div>
+	        <img class="Logo" src="common/images/LOGO.png">
+	        <ul>
+	        	<li>活动</li>
+	        	<li>部落</li>
+	        	<li>申请学分</li>
+	        	<li>积分商城</li>
+	        </ul>
+	        <ul class="L_header_R">
+				<li>
+					<img src="common/images/touxiang.png"/>
+				</li>
+				<li>
+					<img src="common/images/message.png" />
+				</li>
+				<li>
+					<img src="common/images/search.png" />
+				</li>
+
+			</ul>
+	    </div>
+	</div>
+
+</header>
+
+<div class="L_rankPopulary">
+	<div>
+		您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">2016黑白键钢琴系列?菁英 法国钢琴家海米?帕诺希安独音乐会 </a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">人气排行</a></span>
+	</div>
+</div>
+<div class="L_rank_populary_detail">
+	
+	<div class="L_school_detail">
+		<img src="common/images/L_rank02.png" />
+		<div class="L_detail_right">
+			<p>辩论社<span>票</span><span>159555</span></p>
+			<p>选手院校&nbsp;&nbsp;&nbsp;<span>苏州经贸职业学校</span></p>
+			<div class="L_detail_scan">
+				<p>简介</p>
+				<div>
+					苏州大学，简称苏大，坐落于中国历史文化名城——江苏省苏州市，是江苏省属重点综合性大学，国家国防科技工业局与江苏省人民政府共建高校、[1]  国家“211工程”重点建设高校、“2011计划”首批牵头高校，入选首批”国家大学生创新性实验计划”高校之一、“国家建设高水平大学公派研究生项目”、“海外高层次人才引进计划”，同时也是国家教育部“卓越医生教育培养计划”、“卓越工程师教育培养计划”、“卓越法律人才教育培养计划”改革试点高校。
+				</div>
+			</div>
+			<button>投TA一票</button>
+		</div>
+	</div>
+	<div class="L_Group_con">
+        <!--主体导航-->
+        <div>
+        	<div class="L_Ginfo_Nav clearfix">
+	            <a>
+	                <div data-GroupType="1">靓照</div>
+	            </a>
+	            <a>
+	                <div data-GroupType="2">视频</div>
+	            </a>
+	        </div>
+        </div>
+
+        <!--可以被替换的部分-->
+        <div class="L_Group_Swap">
+            <!--内容-->
+        </div>
+    </div>
+	
+	    <footer>
+        <!--分页-->
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </footer>
+</div>
+<!--弹出框-->
+	<div class="modal fade" id="myModal" >
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+		          <div class="modal-body small">
+		            <p>你确定要投票给2号选手？</p>
+		          </div>
+		        <div class="modal-footer" >
+		            <button type="button" class="btn btn-primary ok" data-dismiss="modal">确定</button>
+		            <button type="button" class="btn btn-default cancel" data-dismiss="modal">取消</button>
+	        	</div>
+	    	</div>
+		</div>
+	</div>
+	<!--弹框2-->
+		<div class="modal fade" id="myModal2" >
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+		          <div class="modal-body small">
+		            <p><img src="common/images/L_erro.png" />该活动不向您所在的学校开放投票</p>
+		          </div>
+	    	</div>
+		</div>
+	</div>
+		<!--弹框3-->
+	<div class="modal fade" id="myModal3" >
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+		          <div class="modal-body small">
+		            <p><img src="common/images/L_gou.png" />投票成功！投满3票才生效，还差（1）票！</p>
+		          </div>
+	    	</div>
+		</div>
+	</div>
+			<!--弹框4-->
+	<div class="modal fade" id="myModal4" >
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+		          <div class="modal-body small">
+		            <p><img src="common/images/L_warn.png" />您今日还剩5票未投</p>
+		          </div>
+	    	</div>
+		</div>
+	</div>
+<!--<div id="pFooter"></div>-->
+<footer class="h_PublicFooter">
+    <div>
+    <div class="h_PuFo_InFo">
+        <p class="h_PuFo_Info">
+            <a>关于PU</a>
+            <a>使用帮助</a>
+            <a>联系我们</a>
+            <a>客服中心</a>
+        </p>
+        <p>
+            <span>
+                PocketUni版权所有 苏ICP备12046592号-2<img class="h_PuFo_trust" src="common/images/PublicFoot_img.png">
+            </span>
+        </p>
+    </div>
+    <div class="h_PuFo_Img">
+        <div>
+            <img src="common/images/u74.jpg">
+            <p>APP下载</p>
+        </div>
+        <div>
+            <img src="common/images/u76.jpg">
+            <p>微信公众号</p>
+        </div>
+    </div>
+
+    </div>
+</footer>
+</body>
+
+</html>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/publicContainer.js"></script>
+<script>
+	    $(function () {
+        $(".L_Group_Swap").load("ActivityPhoto.html");
+    })
+	   
+	    
+$(".L_Ginfo_Nav div").click(function () {
+    var type = $(this).data("grouptype");
+    switch (type){
+        case 1: //靓照
+            Swap($(this),1);
+            break;
+        case 2: //视频
+            Swap($(this),2);
+            break;
+    }
+});
+
+//切换菜单
+var Swap = function(dom,type) {
+    $(".L_on").removeClass("L_on");
+    dom.addClass("L_on");
+    switch (type) {
+        case 1:
+            $(".L_Group_Swap").load("ActivityPhoto.html");
+            break;
+        case 2:
+            $(".L_Group_Swap").load("ActivityVideo.html");
+            break;
+    }
+}
+</script>

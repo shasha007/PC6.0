@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="common/css/jquery.datetimepicker.css" />
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <title>活动管理</title>
+</head>
+<body style="background: #f2f6fa">
+<!--<div id="GHead"></div>-->
+<header class="L_HuoHeader">
+	<!--<div>-->
+		<div class="L_header_info">
+			<div>
+			欢迎来到苏州大学文学院理学院苏州大学文学院理学院！
+			<button>切换大学</button>
+			</div>
+		</div>
+	    <div class="L_header_img">
+			<div>
+	        <img class="Logo" src="common/images/LOGO.png">
+	        <ul>
+	        	<li>活动</li>
+	        	<li>部落</li>
+	        	<li>申请学分</li>
+	        	<li>积分商城</li>
+	        </ul>
+	        <ul class="L_header_R">
+				<li>
+					<img src="common/images/touxiang.png"/>
+				</li>
+				<li>
+					<img src="common/images/message.png" />
+				</li>
+				<li>
+					<img src="common/images/search.png" />
+				</li>
+
+			</ul>
+	    </div>
+	</div>
+
+</header>
+<div class="L_AManage_Con clearfix">
+    <!--管理 左侧菜单-->
+    <!--左右侧高度需要用publicManage.js来同一高度-->
+    <div class="L_AManage_Nav">
+        <ul>
+            <li class="L_on" data-ManageType="1">
+                <img src="common/images/L_AG_Nav1.png"> &emsp13;活动详情
+            </li>
+            <li data-ManageType="2">
+                <img src="common/images/L_AG_Nav2.png"> &emsp13;活动成员
+            </li>
+            <li data-ManageType="3">
+                <img src="common/images/L_AG_Nav3.png"> &emsp13;成员审核
+            </li>
+            <li data-ManageType="4">
+                <img src="common/images/L_AG_Nav4.png"> &emsp13;活动公告
+            </li>
+            <li data-ManageType="5">
+                <img src="common/images/L_AG_Nav5.png"> &emsp13;投票选手
+            </li>
+            <li data-ManageType="6">
+                <img src="common/images/L_AG_Nav6.png"> &emsp13;选手审核
+            </li>
+            <li data-ManageType="7">
+                <img src="common/images/L_AG_Nav7.png"> &emsp13;晒现场
+            </li>
+            <li data-ManageType="8">
+                <img src="common/images/L_AG_Nav8.png"> &emsp13;视频
+            </li>
+            <li data-ManageType="9">
+                <img src="common/images/L_AG_Nav9.png"> &emsp13;完结活动
+            </li>
+        </ul>
+    </div>
+      <!--管理 右侧内容-->
+    <div class="L_AManage_Set">
+        <div class="L_AManage_Swap">
+        </div>
+    </div>
+</div>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+    $(".L_AManage_Swap").load("ActivityInfo.html");
+</script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/acyivityManage.js"></script>
+<script src="common/js/activityMember.js"></script>
+</html>

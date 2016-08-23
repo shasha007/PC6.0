@@ -1,0 +1,40 @@
+
+<body>
+<!--<div id="pHead2"></div>-->
+
+<div class="L_AG_Mem">
+	您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">活动管理</a></span>
+
+</div>
+
+<div class="L_AG_Content">
+	<div class="L_endEvent_content">
+		<div><div class="L_endEvent_left">照片</div>
+			<div class="L_endEvent_photo">
+                <img id="icon" src="common/images/H_MG_LOGO.png">
+                        <span>
+                         <p class="L_endEvent_AddImg"> 浏览<input type="file" onchange="UploadImg()" id="file"></p>
+                        </span>
+            </div></div>
+
+		<div><div class="L_endEvent_left">总结</div><textarea rows="12" maxlength="250" name="textarea" id="L_TextArea1" onkeyup="words_deal();"></textarea>
+			<div class="L_endEvent_counter"><span id="textCount">250</span><span>/250</span></div>
+		</div>
+		<div><div class="L_endEvent_left">活动经费</div><input type="text" class="L_endEvent_money"/></div>
+		<div><div class="L_endEvent_left">上传附件</div>
+            <input type='text' name='textfield' id='textfield' class='L_endEvent_txt' /> 
+			<input type='button' class='L_endEventfile_btn' value='浏览...' />
+			<input type="file" name="fileField" class="L_endEvent_mofile" id="fileField" size="28" accept=".xls,.xlsx,.doc,.txt,.pdf" onchange="document.getElementById('textfield').value=this.value" />
+		</div>
+		<button>确定</button>
+	</div>
+	<div class="L_endEvent_right">
+		<p>活动尚末结束，不可完结</p>
+		<p>活动结束后申请完结，发放实践学分和活动积分</p>
+		<p>流程</p>
+		<p>1.上传1张代表生的照片，填写一段终结文字</p>
+		<p>2.等待后台管理员审核</p>
+		<p>3.审核通过后，参加并签到的成员要获得实践学分和活动积分</p>
+	</div>
+</div>
+</body>

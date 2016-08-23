@@ -1,0 +1,218 @@
+<!--
+Created by huqiwen on 16/8/2. 第二课堂
+describe : 
+-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <title>第二课堂</title>
+</head>
+<body>
+<header id="GHead"></header>
+<div id="H_Credit">
+    <nav class="H_CInfo_Nav">
+        <a href="MyApply.html">
+            <span>
+            我的申请
+        </span>
+        </a>
+        <a href="CreditDetail.html">
+            <span>
+            学时明细
+        </span>
+        </a>
+        <a href="CreditExtramural.html">
+            <span class="H_On">
+            第二成绩单
+        </span>
+        </a>
+    </nav>
+    <div class="H_extramural_Header">
+        <div>
+            <p>总学分</p>
+
+            <p>98.00</p>
+        </div>
+        <div>
+            <p>总积分</p>
+
+            <p>98.00</p>
+        </div>
+        <div>
+            <p>总活动数</p>
+
+            <p>98.00</p>
+        </div>
+    </div>
+</div>
+<div class="H_extramural">
+
+    <div class="H_extramural_Radius clearfix">
+        <div class="clearfix">
+            <span>类别</span>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">
+                    2014年上半学期 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">2014年上半学期</a></li>
+                    <li><a href="#">2014年上半学期</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+        <div class="H_ECharts_Ul_Div">
+            <ul class="H_ECharts_Ul clearfix">
+                <li>
+                    <div id="H_ECharts0"></div>
+                    <p>活动参与类(PU平台活动)</p>
+                </li>
+                <li>
+                    <div id="H_ECharts1"></div>
+                    <p>寒暑假社会实践类</p>
+                </li>
+                <li>
+                    <div id="H_ECharts2"></div>
+                    <p>文体与创新创业竞赛类</p>
+                </li>
+                <li>
+                    <div id="H_ECharts3"></div>
+                    <p>社会工作与技能培训类</p>
+                </li>
+                <li>
+                    <div id="H_ECharts4"></div>
+                    <p>志愿者类</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="H_extramural_Line clearfix">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown">
+                2014年上半学期 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">2014年上半学期</a></li>
+                <li><a href="#">2014年上半学期</a></li>
+            </ul>
+        </div>
+        <div id="H_ECharts_Line0"></div>
+        <div id="H_ECharts"></div>
+    </div>
+    <div class="H_extramural_ListCover">
+        <div class="H_extramural_List">
+            <header>
+                <p>明细</p>
+                <div class="dropdown H_GInfor_More">
+                    <button type="button" class="btn dropdown-toggle" id="H_GInfor_Btn"
+                            data-toggle="dropdown">
+                        <i>...</i>
+                    </button>
+                    <ul class="dropdown-menu" id="H_Group_Manege" role="menu" aria-labelledby="H_GInfor_Btn">
+                        <!--下拉选项-->
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="1" class="extramural_check_btn">筛选</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div class="H_extramural_ListTit clearfix">
+                <ul>
+                    <li>
+                        <!--权限问题-->
+                        <input class="extramural_check" type="checkbox">
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle"
+                                     data-toggle="dropdown">
+                        时间 <span class="caret"></span>
+                    </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">2014年上半学期</a></li>
+                            <li><a href="#">2014年上半学期</a></li>
+                        </ul>
+                            </div>
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle"
+                                data-toggle="dropdown">
+                            类别 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">2014年上半学期</a></li>
+                            <li><a href="#">2014年上半学期</a></li>
+                        </ul>
+                            </div>
+                    </li>
+                    <li>分类</li>
+                    <li>活动名称</li>
+                    <li>学分</li>
+                    <li>积分</li>
+                </ul>
+            </div>
+            <div class="H_extramural_ListCon">
+                <ul>
+                    <li>
+                        <p><input class="extramural_check" type="checkbox"></p>
+                        <p>2014年上半学期</p>
+                        <p>201半学期</p>
+                        <p>2014年上半学期123123</p>
+                        <p>2014年上半学期</p>
+                        <p>50.00</p>
+                        <p>100.00</p>
+                    </li>
+                    <li>
+                        <p><input class="extramural_check" type="checkbox"></p>
+                        <p>2014年上半学期</p>
+                        <p>201半学期</p>
+                        <p>2014年上半学期123123</p>
+                        <p>2014年上半学期</p>
+                        <p>50.00</p>
+                        <p>100.00</p>
+                    </li>
+                    <li>
+                        <p><input class="extramural_check" type="checkbox"></p>
+                        <p>2014年上半学期</p>
+                        <p>201半学期</p>
+                        <p>2014年上半学期123123</p>
+                        <p>2014年上半学期</p>
+                        <p>50.00</p>
+                        <p>100.00</p>
+                    </li>
+                    <li>
+                        <p><input class="extramural_check" type="checkbox"></p>
+                        <p>2014年上半学期</p>
+                        <p>201半学期</p>
+                        <p>2014年上半学期123123</p>
+                        <p>2014年上半学期</p>
+                        <p>50.00</p>
+                        <p>100.00</p>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer class="H_extramural_Footer">
+    <button>导出excel</button>
+</footer>
+<footer id="pFooter"></footer>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/echarts/dist/echarts.min.js"></script>
+<script src="common/js/publicContainer.js"></script>
+<script src="common/js/Extra.js"></script>
+</html>

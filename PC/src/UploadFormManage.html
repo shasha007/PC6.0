@@ -1,0 +1,90 @@
+<!--
+Created by huqiwen on 16/7/29. 下载申请表格
+describe : 
+-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-cn">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="common/css/reset.min.css" rel="stylesheet">-->
+    <!--<link href="common/css/style.css" rel="stylesheet">-->
+    <!--<title>下载申请表格</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--主体内容-->
+<div class="H_GM_DForm clearfix">
+    <div class="H_DForm_Tit">
+        <span class="H_On">我的申请</span>
+        <span>提交表单</span>
+    </div>
+    <!--列表-->
+    <div class="H_DForm">
+        <div class="H_DForm_Header">
+            <span>公告标题</span>
+            <span>发布时间</span>
+            <span>操作</span>
+        </div>
+        <ul>
+            <li class="H_DForm_Con">
+                <span>公告标题公告标题</span>
+                <span>0秒前</span>
+                <span class="H_DForm_Doing">
+                    <a>编辑</a>
+                    <a>删除</a>
+                </span>
+            </li>
+        </ul>
+        <footer class="H_Foot_pagination">
+            <!--分页-->
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </footer>
+    </div>
+    <!--提交表单-->
+    <div class="H_SubForm">
+        <p>
+            <span class="s1">表格名称:</span>
+            <span class="s2"><em id="filename"></em></span>
+        </p>
+        <p>
+            <span class="s3">上传表格:</span>
+            <span class="H_Form_Add s4"> 浏览<input type="file" onchange="uploadFile()" id="file"></span>
+        </p>
+        <footer>
+            <button>
+                保存
+            </button>
+        </footer>
+
+    </div>
+    <!--弹出框-->
+    <div class="modal fade" id="H_DForm_Del">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p>您确定要删除吗?</p>
+                <div>
+                    <a data-dismiss="modal" class="H_DForm_DelC">取消</a>
+                    <a class="H_DForm_DelO">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="common/js/Form.js"></script>
+</div>
+
+<!--</body>-->
+<!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+<!--<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<!--<script src="common/js/publicContainer.js"></script>-->
+<!--</html>-->

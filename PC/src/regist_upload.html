@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>pu口袋校园</title>
+		<link rel="stylesheet" href="common/css/reset.min.css" />
+		<link rel="stylesheet" href="common/css/style.css" />
+	</head>
+	<body>
+		<!--公用头部-->
+		<div id="pHead"></div>
+		<div class="wk_container_regist">
+			<div class="wk_regist_upload">
+				<p>注册</p>
+				<div>
+					<img src="common/images/u90.png" id="icon">
+					<i>浏览<input type="file" onchange="uploadIcon()" id="file"></i>
+					<em id="filename"></em>
+				</div>
+				<button>上传头像</button>
+				<div>
+					学号
+					<div><input type="text"></div>
+				</div>
+				<div>
+					姓名
+					<div><input type="text"></div>
+				</div>
+				<div>
+					院系
+					<span class="wk_regist_upload_select"></span>&ensp;
+					年纪
+					<span class="wk_regist_upload_select"></span>
+				</div>
+				<div>
+					专业
+					<div><input type="text"></div>
+				</div>
+				<div>
+					班级
+					<div><input type="text"></div>
+				</div>
+				<div>
+					性别
+					<div>
+						<input type="radio" name="sex" id="sexM"/><label for="sexM">男</label>
+						<input type="radio" name="sex" id="sexW"/><label for="sexW">女</label>
+					</div>
+					<p>性别修改后,不能再做修改!</p>
+				</div>
+				<div><a href="" class="wk_nextJump">下一步</a></div>
+			</div>
+		</div>
+		<!--公用底部-->
+		<div id="pFooter"></div>
+	</body>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="common/js/publicContainer.js"></script>
+	<script src="common/js/regist.js"></script>
+</html>

@@ -1,0 +1,105 @@
+
+<body>
+<!--<div id="pHead2"></div>-->
+
+<div class="L_AG_Mem">
+    您的位置&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">活动</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<span><a href="#">活动管理</a></span>
+</div>
+<div class="L_AG_Content">
+
+    <div class="L_NumM_Con clearfix">
+        <!--头部-->
+        <div class="clearfix">
+            <p>
+                共<span>1</span>条公告
+            </p>
+            <!--搜索-->
+            <div class="L_NumM_Search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="标题：">
+				       <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                      搜索
+                  </button>
+                 </span>
+                </div>
+            </div>
+            <div class="L_NumM_right">
+	            <a data-toggle="modal"
+	               data-target="#L_NotifyM_Del">删除公告</a>
+	            <button type="button" class="L_addNotice">添加公告
+	            </button>
+            </div>
+
+        </div>
+        <!--成员列表-->
+
+        <div class="L_NumM_Li">
+            <table class="table">
+                <thead class="L_NumM_LiTit">
+                <tr>
+                    <th style="text-align: center;"><input type="checkbox"></th>
+                    <th style="text-align: center;vertical-align:middle;" class="sorting">ID</th>
+                    <th style="text-align: center;vertical-align:middle;">公告标题</th>
+                    <th style="text-align: center;vertical-align:middle;">发布时间</th>
+                    <th style="text-align: center;vertical-align:middle;">操作</th>
+                </tr>
+                </thead>
+                <tbody class="L_NumM_tbody">
+                <tr>
+                    <th style="text-align: center;"><input type="checkbox"></th>
+                    <td>17756</td>
+                    <td>公告标题公告标题</td>
+                    <td>0秒前</td>
+                    <td>
+                        <p><a href="#">编辑</a></p>
+
+                        <p><a href="#">删除</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="text-align: center;"><input type="checkbox"></th>
+                    <td>17756</td>
+                    <td>公告标题公告标题</td>
+                    <td>0秒前</td>
+                    <td>
+                        <p><a href="#">编辑</a></p>
+
+                        <p><a href="#">删除</a></p>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+        
+            <!--弹出框-->
+    <div class="modal fade" id="L_NotifyM_Del">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p>您确定要删除吗?</p>
+                <div>
+                    <a data-dismiss="modal" class="L_NotifyM_DelC">取消</a>
+                    <a class="L_NotifyM_DelO">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <footer>
+            <!--分页-->
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </footer>
+    </div>
+</div>
+</body>
+<script src="common/js/L_editA.js"></script>

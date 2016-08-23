@@ -1,0 +1,121 @@
+<!--
+Created by huqiwen on 16/7/15. 个人中心_基本信息
+describe : 
+-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/reset.min.css" rel="stylesheet">
+    <link href="common/css/style.css" rel="stylesheet">
+    <title>基本信息</title>
+</head>
+<body >
+<header id="GHead"></header>
+<div class="H_Person" style="background: #f2f6fa;">
+    <nav class="H_Person_Nav">
+        <span class="H_On">基本信息</span>
+        <span>账号安全</span>
+    </nav>
+    <header class="H_PInfo_top">
+        <p class="H_PInfo_Tit">个人信息</p>
+        <div class="H_PInfo_L">
+            <div class="clearfix">
+                <img id="icon" class="H_PInfo_ShowImg" src="common/images/H_MG_LOGO.png">
+                <span>
+                    <p class="H_PInfo_AddImg">
+                        预览<input type="file" onchange="UploadImg()" id="file">
+                    </p>
+                </span>
+            </div>
+        </div>
+        <div class="H_PInfo_R">
+           <span  class="H_Name">
+               <p>昵称</p>
+           <input type="text" placeholder="请输入昵称">
+           </span>
+           <span class="H_Sth">
+               <p >个性签名</p>
+           <input type="text">
+           </span>
+           <span class="H_Love">
+                <p>情感</p>
+               <div class="btn-group">
+                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      选择情感 <span class="caret"></span>
+                   </button>
+                   <ul class="dropdown-menu" role="menu">
+                       <li><a href="#">功能</a></li>
+                       <li><a href="#">另一个功能</a></li>
+                       <li><a href="#">其他</a></li>
+                   </ul>
+               </div>
+               <!--下拉-->
+           </span>
+           <span  class="H_PInfo_Tips">
+               <p>兴趣(若要更改兴趣标签,请登录客户端操作)</p>
+               <p>
+                   <span class="H_On">123</span>
+                   <span>演唱会</span>
+                   <span>123</span>
+                   <span>演唱会</span>
+               </p>
+           </span>
+
+        </div>
+    </header>
+
+    <div class="H_PInfo_Info clearfix">
+        <p class="H_PInfo_Tit">实名信息<span>您已成功认证学生证，以下信息不可修改</span></p>
+        <div class="H_PInfo_InfoL">
+            <span class="H_PInfo_Name">
+                <p>真实姓名</p>
+                <p><input type="text" value="マヂし" disabled></p>
+            </span>
+             <span class="H_PInfo_Sex" >
+                <p>性别</p>
+                <p>男</p>
+            </span>
+              <span class="H_PInfo_Bth">
+                <p>出生日期</p>
+                <p><input type="datetime" value="マヂし" disabled></p>
+            </span>
+            <span class="H_PInfo_SId">
+                <p>学生证</p>
+                <img src="common/images/H_Person_StudentId.png">
+            </span>
+        </div>
+        <div class="H_PInfo_InfoR">
+            <span>
+                <p class="H_PInfo_School">学校</p>
+                <p><input type="text" value="マヂし" disabled></p>
+            </span>
+             <span class="H_PInfo_Id">
+                <p>学号</p>
+                 <p><input type="text" value="マヂし" disabled></p>
+            </span>
+              <span class="H_PInfo_G">
+                <p>院系</p>
+                <p><input type="text" value="マヂし" disabled></p>
+            </span>
+            <span class="H_PInfo_Class">
+                <p>年级</p>
+                <p><input type="text" value="マヂし" disabled></p>
+            </span>
+             <span class="H_PInfo_Spe">
+                <p>专业</p>
+                <p><input type="text" value="マヂし" disabled></p>
+            </span>
+        </div>
+    </div>
+    <footer class="H_PInfo_Save">
+        <button>保存</button>
+    </footer>
+</div>
+<footer id="pFooter"></footer>
+</body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="common/js/public.js"></script>
+</html>
